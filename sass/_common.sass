@@ -129,8 +129,72 @@ a
 
 
 
-
-
+//select
+.select
+	position: relative
+	+vertical
+	cursor: pointer
+	width: 100%
+	+user-select(none)
+	+reg
+	border: 1px solid #bbbdbf
+	padding: 0 50px 0 20px
+	height: 69px 
+	+box
+	text-align: left
+	+r(768)
+		padding: 0 40px 0 10px
+		height: 49px 
+	i
+		+s(select-up)
+		position: absolute
+		top: 10px
+		right: 20px
+		+r(768)
+			top: 5px
+			right: 10px
+		&:after
+			content: ""
+			+s(select-down)
+			position: absolute
+			top: 100%
+			margin-top: 15px
+			left: 0
+			+r(1024)
+				margin-top: 5px
+.select__text
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	+fs(20.89)
+	color: #bbbdbf
+	letter-spacing: 0.15em
+	+reg  
+	overflow: hidden
+	width: 100%
+	height: 30px
+.select__list
+	position: absolute
+	display: none
+	top: 100%
+	margin-top: 1px
+	left: -1px
+	right: -1px
+	z-index: 100
+	overflow: hidden
+	border: 1px solid #bbbdbf
+	border-top: none
+	li
+		cursor: pointer
+		+fs(20.89)
+		color: #bbbdbf
+		letter-spacing: 0.15em
+		+reg  
+		padding: 10px 20px
+		background: #fff
+		&:hover
+			background: darken(#fff, 20%)
+			color: #fff  
 
 
 
