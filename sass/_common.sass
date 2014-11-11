@@ -47,20 +47,78 @@
 // p
 // 	+jpg(bla)
 
-
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
+	height: 100%
+	
++font("ProximaNova Bold", ProximaNova-Bold)
++font("ProximaNova Regular", ProximaNova-Regular)
++font("ProximaNova Regular Italic", ProximaNova-RegularIt)
++font("ProximaNova Light", ProximaNova-Light)
 
+=bold
+	font-family: "ProximaNova Bold", Arial, sans-serif
+=reg
+	font-family: "ProximaNova Regular", Arial, sans-serif
+=light
+	font-family: "ProximaNova Light", Arial, sans-serif
+=italic
+	font-family: "ProximaNova Regular Italic", Arial, sans-serif
+=georgia
+	font-family: Georgia, Arial, sans-serif 
+	
+=ttu
+	text-transform: uppercase	
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+a
+	text-decoration: none
 
 // common blocks      
-
-
-
-
-
-
+.btn
+	
+	width: 100%
+	max-width: 377px 
+	display: inline-block
+	position: relative
+	span
+		padding: 18px
+		display: block
+		+box
+		+georgia
+		font-style: italic
+		color: #808184
+		+fs(16.25)
+		letter-spacing: 0.15em
+		text-align: center
+		position: relative
+		z-index: 2
+	&:before
+		position: absolute
+		top: 3px
+		left: 3px
+		right: -3px
+		bottom: -3px
+		content: "" 
+		background: #bbbdbf
+		+opacity(0.9)
+		z-index: 1
+	&:active
+		span
+			top: 1px
+.btn_white
+	span
+		background: #fff 
+.btn_yellow
+	span
+		background: #f3c918
+		color: #fff  
+.btn_purple
+	span
+		background: #c24f9c 
+		color: #FFF 
 
 
 

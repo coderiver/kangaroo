@@ -1,29 +1,316 @@
-// Normally mainpage styles
+.container, .container-fluid, .row
+	+clr
+.out
+	height: 100%
+	min-width: 320px 
+.select
+	min-height: 100%
+	position: relative
+	+box
+	+r(1024)
+		height: auto
+		padding-top: 20px
+		padding-bottom: 20px 
+	&__inner
+		width: 100%
+		margin: 0 auto
+		text-align: center
+	p
+		+fs(18.75)
+		letter-spacing: 0.15em
+		color: #fff  
+		+reg
+		max-width: 600px
+		margin: 0 auto 20px
+	h4
+		+georgia
+		font-style: italic
+		+fs(18.75)
+		letter-spacing: 0.15em
+		color: #fff
+		margin-bottom: 25px  
+	&-second
+		background: #f3c918
+		height: 100%
+		+r(1024)
+			height: auto
+	&-third
+		background: #f06461
+		height: 100%
+		+r(1024)
+			height: auto
+	&-fourth
+		background: url(../img/select-fourth.jpg) no-repeat
+		+cover
+		height: 100% 
+		+r(1024)
+			height: auto
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: url(../img/purple-overlay.png)
+	&-fifth
+		background: #fff
+		height: 100%
+		+r(1024)
+			height: auto
+.select-first
+	background: url(../img/select-first.jpg) no-repeat 
+	+cover
+	padding: 12px 15px 12px 15px
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/green-overlay.png)
+	h1
+		+fs(30)
+		+georgia
+		font-style: italic
+		letter-spacing: 0.15em
+		color: #FFF
+		margin-bottom: 35px
+	.select__inner
+		padding-top: 40px
 
+.lang
+	+vertical
+	width: 132px
+	height: 58px
+	background: #fff
+	position: absolute
+	bottom: 315px
+	left: 0
+	z-index: 99
+	+r(1024)
+		display: inline-block
+		position: relative
+		bottom: auto
+		left: auto
+		margin-top: 20px
+	ul
+		display: inline-block
+		vertical-align: middle
+	li
+		display: inline-block
+		padding: 0 12px
+	a
+		+fs(17)
+		letter-spacing: 0.15em
+		color: #01a69e
+		+reg
+		display: inline-block
+		vertical-align: middle
+		+ttu
+		&:hover
+			text-decoration: underline
+	&:after
+		content: "" 
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -8px
+		margin-left: -1px
+		height: 17px
+		width: 1px
+		background: #01a69e
+.login
+	float: right
+	+clr
+	width: 100%
+	max-width: 380px 
+	text-align: center
+	.btn
+		display: block
+		margin-bottom: 20px
+	&__forgot
+		+fs(12.53)
+		+bold
+		color: #fff
+		letter-spacing: 0.15em
+		display: inline-block
+		margin-top: 5px 
+		&:hover
+			border-bottom: 1px solid #fff 
+			
+.logo
+	margin-bottom: 30px
+	display: inline-block
+	width: 100%
+	max-width: 382px
+	img
+		width: 100%
+.line-white
+	display: inline-block
+	width: 53px
+	height: 7px
+	+border-radius(4px)
+	background: #fff 
+	margin-bottom: 35px
 
+.more
+	+georgia
+	font-style: italic
+	color: #fff
+	+fs(18.75)
+	letter-spacing: 0.15em
+	text-align: center
+	display: inline-block
+	margin-top: 50px
+	span
+		display: inline-block
+		margin-bottom: 55px
+	.arr-bot
+		+s(arr-more)
+		display: block
+		margin: 0 auto
+.vertical
+	+vertical
+	height: 100%
+.middle
+	display: inline-block
+	width: 100%
+	vertical-align: middle
+	float: none
+.top-nav
+	padding: 10px 15px 13px 15px
+	background: #fff 
+	text-align: justify
+	+fs(0.1)
+	word-spacing: 0px
+	&:after
+		content: ""
+		width: 100%
+		display: inline-block
+	+r(768)
+		text-align: center
+	.btn
+		display: inline-block
+		vertical-align: middle
+		+r(768)
+			display: block
+			margin: 0 auto 20px 
+.k-logo
+	display: inline-block
+	vertical-align: middle
+	margin-top: 3px
+.icons-block
+	max-width: 640px
+	float: none
+	margin: 0 auto
+.icons
+	height: 200px
+	+vertical
+	a
+		display: inline-block
+		vertical-align: middle
+	i
+		display: inline-block
+.tweet
+	i
+		+s(tweet)
+.database
+	i
+		+s(database)
+.tasks
+	i
+		+s(tasks)
+.email
+	i
+		+s(email)
+.mouse
+	i
+		+s(mouse)
+.cal
+	i
+		+s(cal)	
+.social
+	i
+		+s(social)
+.mouse-small
+	i
+		+s(mouse-small)
+.tasks-small
+	i
+		+s(tasks-small)
+.cloud
+	i
+		+s(cloud)
+.email-small
+	i
+		+s(email-small)
+.cal-small
+	i
+		+s(cal-small)		
+.info
+	padding: 30px 0 0 0 
 
+.contacts
+	max-width: 800px
+	margin: 0 auto
+	&__item
+		text-align: center
+		margin-bottom: 90px
+	&__icon
+		height: 90px
+		+vertical
+		margin-bottom: 30px
+		a
+			display: inline-block
+			vertical-align: middle
+	&__email
+		+s(contacts-email)
+	&__map
+		+s(contacts-map)
+	&__call
+		+s(contacts-call)
+	&__title
+		+fs(18.75)
+		+reg
+		letter-spacing: 0.15em
+		color: #bbbdbf
+		display: inline-block
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer
+	&__inner
+		padding: 17px 15px 33px 15px 
+		text-align: justify
+		+fs(0.1)
+		word-spacing: 0px
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
+	&__left
+		display: inline-block
+		vertical-align: middle
+	&__copyright
+		display: inline-block
+		vertical-align: middle
+		+s(copyright)
+	&__nav
+		+vertical
+		.share
+			+s(share)
+			display: block
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-right: 30px
+		a
+			+fs(16.25)
+			letter-spacing: 0.15em
+			+reg
+			color: #bbbdbf
+			&:hover
+				text-decoration: underline
 
 
 
