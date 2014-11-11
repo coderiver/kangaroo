@@ -82,28 +82,31 @@
 			letter-spacing: 0.05em  
 			max-width: 100%
 			+fs(24)
-.section-first
-	background: url(../img/section-first.jpg) no-repeat 
-	+cover
-	padding: 12px 15px 12px 15px
-	&:before
-		content: "" 
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background: url(../img/green-overlay.png)
-	h1
-		+fs(30)
-		+georgia
-		font-style: italic
-		letter-spacing: 0.15em
-		color: #FFF
-		margin-bottom: 35px
-	.section__inner
-		padding-top: 40px
-
+	&-first
+		background: url(../img/section-first.jpg) no-repeat 
+		+cover
+		padding: 12px 15px 12px 15px
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: url(../img/green-overlay.png)
+		h1
+			+fs(30)
+			+georgia
+			font-style: italic
+			letter-spacing: 0.15em
+			color: #FFF
+			margin-bottom: 35px
+		.section__inner
+			padding-top: 40px
+	&-login
+		padding: 12px 15px 30px 15px
+		height: auto
+		min-height: 100%
 .lang
 	+vertical
 	width: 132px
@@ -163,7 +166,37 @@
 		margin-top: 5px 
 		&:hover
 			border-bottom: 1px solid #fff 
-			
+	&__input
+		position: relative
+		display: block
+		margin-bottom: 20px
+		i
+			display: block
+			position: absolute
+			top: 50%
+		input
+			width: 100%
+			+box
+			padding: 18px 18px 18px 60px
+			+fs(16.25)
+			letter-spacing: 0.15em
+			+reg
+			color: #fff
+			background: none
+			border: 2px solid #fff
+			+placeholder-color(#fff)
+	&__username
+		i
+			left: 10px 
+			margin-top: -19px
+			+s(person)
+	&__password
+		i
+			left: 12px 
+			margin-top: -20px
+			+s(lock)
+
+
 .logo
 	margin-bottom: 30px
 	display: inline-block
