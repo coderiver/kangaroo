@@ -49,17 +49,17 @@ a { text-decoration: none; }
 
 .out { height: 100%; min-width: 320px; }
 
-.select { min-height: 100%; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 1024px) { .select { height: auto; padding-top: 20px; padding-bottom: 20px; } }
+.select { height: 100%; min-height: 800px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 1024px) { .select { height: auto; padding-top: 20px; padding-bottom: 20px; min-height: 0; } }
 .select__inner { width: 100%; margin: 0 auto; text-align: center; }
 .select p { font-size: 18.75px; letter-spacing: 0.15em; color: white; font-family: "ProximaNova Regular", Arial, sans-serif; max-width: 600px; margin: 0 auto 20px; }
 .select h4 { font-family: Georgia, Arial, sans-serif; font-style: italic; font-size: 18.75px; letter-spacing: 0.15em; color: white; margin-bottom: 25px; }
 .select-second { background: #f3c918; height: 100%; }
-@media only screen and (max-width: 1024px) { .select-second { height: auto; } }
+@media only screen and (max-width: 1024px) { .select-second { height: auto; min-height: 0; } }
 .select-third { background: #f06461; height: 100%; }
-@media only screen and (max-width: 1024px) { .select-third { height: auto; } }
+@media only screen and (max-width: 1024px) { .select-third { height: auto; min-height: 0; } }
 .select-fourth { background: url(../img/select-fourth.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 100%; }
-@media only screen and (max-width: 1024px) { .select-fourth { height: auto; } }
+@media only screen and (max-width: 1024px) { .select-fourth { height: auto; min-height: 0; } }
 .select-fourth:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(../img/purple-overlay.png); }
 .select-fifth { background: white; height: 100%; }
 @media only screen and (max-width: 1024px) { .select-fifth { height: auto; } }
