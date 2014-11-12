@@ -267,8 +267,10 @@ a { text-decoration: none; }
 @media only screen and (max-width: 1200px) { .board__sticker span { font-size: 43.75px; } }
 .board__title { font-size: 22px; font-family: "ProximaNova Regular", Arial, sans-serif; color: white; letter-spacing: 0.15em; text-transform: uppercase; height: 70px; }
 @media only screen and (max-width: 1200px) { .board__title { font-size: 18px; } }
+@media only screen and (max-width: 768px) { .board__title { font-size: 26px; } }
 .board__text { font-size: 20px; font-family: Georgia, Arial, sans-serif; font-style: italic; letter-spacing: 0.15em; color: white; overflow: hidden; width: 100%; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 @media only screen and (max-width: 1200px) { .board__text { font-size: 16px; } }
+@media only screen and (max-width: 768px) { .board__text { font-size: 24px; } }
 
 .dropdown { position: absolute; left: 0; top: 100%; right: 0; z-index: 999; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; }
 .dropdown.is-open { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
