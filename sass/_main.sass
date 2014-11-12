@@ -1,8 +1,24 @@
-.container, .container-fluid, .row
-	+clr
 .out
 	height: 100%
 	min-width: 320px 
+.green-filter
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/green-overlay.png)
+.purple-filter
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/purple-overlay.png)
 .section
 	height: 100%
 	min-height: 800px
@@ -50,14 +66,6 @@
 		+r(1024)
 			height: auto
 			min-height: 0px
-		&:before
-			content: "" 
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background: url(../img/purple-overlay.png)
 	&-fifth
 		background: #fff
 		height: 100%
@@ -154,7 +162,7 @@
 	width: 100%
 	max-width: 380px 
 	text-align: center
-	.btn
+	.button
 		display: block
 		margin-bottom: 20px
 	&__forgot
@@ -248,7 +256,7 @@
 		display: inline-block
 	+r(768)
 		text-align: center
-	.btn
+	.button
 		display: inline-block
 		vertical-align: middle
 		+r(768)
@@ -423,7 +431,7 @@
 			border: 1px solid #bbbdbf 
 			+r(480)
 				padding: 10px 
-	.btn
+	.button
 		float: right
 		margin-top: 10px
 		span
@@ -435,6 +443,80 @@
 
 
 
+//board
+.navigation
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 132px
+	&__left
+		background: #a5496f
+		padding: 45px 15px 42px 15px 
+		text-align: justify
+		+fs(0.1)
+		word-spacing: 0px
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
+	&__title
+		+georgia
+		font-style: italic
+		color: #fff
+		+fs(27.08)
+		letter-spacing: 0.15em
+		display: inline-block
+		vertical-align: middle
+		padding: 0 0 0 15px
+	&__button
+		+s(navigation-btn)
+		display: inline-block
+		vertical-align: middle
+		margin: 0 30px 0 0 
+		position: relative
+		&:active
+			top: 1px
+	&__search
+		height: 132px
+		+vertical
+		text-align: left
+		position: relative
+		padding-left: 30px
+	.search__icon
+		+s(search-icon)
+		display: inline-block
+		vertical-align: middle
+		position: absolute
+		top: 50%
+		left: 30px
+		margin-top: -30px
+	.search__input
+		display: inline-block
+		vertical-align: middle
+		padding: 20px 20px 10px 100px
+		position: relative
+		width: 100%
+		+box
+		+fs(29.54)
+		+reg
+		letter-spacing: 0.075em  
+		+placeholder-color(rgba(187, 189, 191, 0.5))
+		background: none
+		// background-image: url(../img/icons/search-icon.png) left center no-repeat 
+	&__logo
+		text-align: right
+		a
+			margin-right: 30px
+			margin-top: 37px 
+			display: inline-block
+			width: 100%
+			max-width: 268px
+			img
+				width: 100%
+.board
+	height: 100%
+	padding: 132px 15px 138px 15px
 
 
 
