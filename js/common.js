@@ -38,4 +38,11 @@ head.ready(function() {
 	    });
 	    
 	});
+	//dropdown
+	$('.navigation__button').on('click', function() {
+		$('.dropdown').toggleClass('is-open');
+		$('.navigation__left').toggleClass('is-active');
+		$(this).toggleClass('is-active');
+		return false;
+	});
 });

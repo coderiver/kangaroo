@@ -1,6 +1,11 @@
 .out
 	height: 100%
 	min-width: 320px 
+	&.page-in
+		min-height: 825px
+		position: relative
+		+r(1200)
+			height: auto
 .green-filter
 	&:before
 		content: "" 
@@ -240,6 +245,9 @@
 		+s(arr-more)
 		display: block
 		margin: 0 auto
+	&:hover
+		color: #fff
+		text-decoration: none
 .vertical
 	+vertical
 	height: 100%
@@ -348,11 +356,22 @@
 		display: inline-block
 
 .footer
+	&-absolute
+		position: absolute
+		bottom: 0
+		right: 0
+		left: 0
+		+r(1200)
+			position: static
+			bottom: auto
+			left: auto
+			right: auto
 	&__inner
 		padding: 17px 15px 33px 15px 
 		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
+		background: #fff 
 		&:after
 			content: ""
 			width: 100%
@@ -453,17 +472,32 @@
 	top: 0
 	left: 0
 	right: 0
-	height: 132px
+	min-height: 132px
+	+r(1200)
+		position: static
+		top: auto
+		left: auto
+		right: auto
 	&__left
 		background: #a5496f
 		padding: 45px 15px 42px 15px 
+		+box
+		height: 132px
 		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
+		+tr(background 0.5s)
+		&.is-active
+			background: #efefef
+			.navigation__title
+				color: #c24f9c 
 		&:after
 			content: ""
 			width: 100%
 			display: inline-block
+		+r(600)
+			height: auto
+			padding: 20px 15px 20px 15px 
 	&__title
 		+georgia
 		font-style: italic
@@ -473,20 +507,42 @@
 		display: inline-block
 		vertical-align: middle
 		padding: 0 0 0 15px
+		+tr(color 0.5s)
+		+r(600)
+			+fs(20)
+			padding: 0
 	&__button
 		+s(navigation-btn)
 		display: inline-block
 		vertical-align: middle
 		margin: 0 30px 0 0 
 		position: relative
+		+r(600)
+			background: url(../img/icons/navigation-btn.png) no-repeat
+			+cover
+			background-position: top center
+			width: 37px
+			height: 30px 
+			margin: 0
 		&:active
 			top: 1px
+		&.is-active
+			+s(navigation-btn-active)
+			+r(600)
+				background: url(../img/icons/navigation-btn-active.png) no-repeat
+				+cover
+				background-position: top center 
+				width: 37px
+				height: 30px 
 	&__search
 		height: 132px
 		+vertical
 		text-align: left
 		position: relative
 		padding-left: 30px
+		+r(600)
+			padding: 15px 15px 15px 
+			height: auto
 	.search__icon
 		+s(search-icon)
 		display: inline-block
@@ -495,6 +551,12 @@
 		top: 50%
 		left: 30px
 		margin-top: -30px
+		+r(600)
+			background: url(../img/icons/search-icon.png) no-repeat
+			+cover
+			width: 39px
+			height: 39px 
+			left: 15px
 	.search__input
 		display: inline-block
 		vertical-align: middle
@@ -508,30 +570,213 @@
 		+placeholder-color(rgba(187, 189, 191, 0.5))
 		background: none
 		// background-image: url(../img/icons/search-icon.png) left center no-repeat 
+		+r(600)
+			+fs(22)
+			padding: 10px 15px 10px 50px 
 	&__logo
 		text-align: right
 		a
 			margin-right: 30px
 			margin-top: 37px 
+			margin-bottom: 20px
 			display: inline-block
 			width: 100%
 			max-width: 268px
 			img
 				width: 100%
+			+r(600)
+				margin: 15px 15px 15px 
 .board
 	height: 100%
-	padding: 132px 15px 138px 15px
+	padding: 132px 15px 95px 15px
+	min-height: 825px
+	+r(1200)
+		min-height: 0
+		padding: 0 15px 0 15px  
+	&__inner
+		height: 100%
+	&__item
+		height: 100%
+		+vertical
+		min-height: 600px
+		+r(1200)
+			height: 470px
+			padding-top: 30px
+			padding-bottom: 30px
+		&.is-mail
+			background: #b576a5
+		&.is-tasks
+			background: #b2678a
+		&.is-datacenter
+			background: #d1695e
+		&.is-calendar
+			background: #ea9d4f
+		&.is-social
+			background: #ecbe55
+		&.is-virtual
+			background: #e5b944
+		&.is-mail_pounch
+			background: #5bbd82
+		&.is-tasks_pounch
+			background: #86c884
+		&.is-datacenter_pounch
+			background: #6ac3a3
+		&.is-calendar_pounch
+			background: #58c1b5
+		&.is-social_pounch
+			background: #2096a3
+		&.is-virtual_pounch
+			background: #245477
+	&__info
+		display: inline-block
+		vertical-align: middle 
+		height: 470px
+		width: 100%
+		overflow: hidden
+		+r(1200)
+			height: auto
+	&__icon
+		max-width: 295px
+		+border-radius(50%)
+		position: relative
+		width: 80%
+		margin: 0 auto 90px
+		padding-top: 20px
+		img
+			width: 100%
+	&__sticker
+		position: absolute
+		top: 0px
+		right: 3px
+		width: 80px
+		height: 80px
+		background: #f06461 
+		+border-radius(50%)
+		+vertical
+		display: none
+		+r(1600)
+			width: 60px
+			height: 60px
+		+r(1200)
+			width: 80px
+			height: 80px
+		&.is-active
+			display: block
+		span
+			+fs(43.75)
+			+reg
+			color: #fff 
+			display: inline-block
+			vertical-align: middle
+			+r(1600)
+				+fs(36)
+			+r(1200)
+				+fs(43.75)
+	&__title
+		+fs(22)
+		+reg
+		color: #fff
+		letter-spacing: 0.15em 
+		+ttu
+		height: 70px
+		+r(1200)
+			+fs(18)
+	&__text
+		+fs(20)
+		+georgia
+		font-style: italic
+		letter-spacing: 0.15em
+		color: #fff  
+		overflow: hidden
+		width: 100%
+		-ms-text-overflow: ellipsis
+		text-overflow: ellipsis
+		+r(1200)
+			+fs(16)
 
-
-
-
-
-
-
-
-
-
-
+.dropdown
+	position: absolute
+	left: 0
+	top: 100%
+	right: 0
+	z-index: 999
+	visibility: hidden
+	+opacity(0)
+	+tr(opacity 0.5s)
+	&.is-open
+		visibility: visible
+		+opacity(1)
+	li
+		a
+			display: block
+			background: #efefef
+			margin-top: 2px
+			+vertical
+			padding: 10px 25px 10px 30px
+			text-align: left
+			i
+				display: inline-block
+				vertical-align: middle
+				width: 50px
+				height: 50px
+				+border-radius(50%)
+				margin-right: 20px
+				+r(600)
+					width: 40px
+					height: 40px
+				&.is-virtual
+					background: url(../img/icons/dd-mouse.png) no-repeat
+					+cover
+				&.is-cal
+					background: url(../img/icons/dd-cal.png) no-repeat
+					+cover
+				&.is-datacenter
+					background: url(../img/icons/dd-cloud.png) no-repeat
+					+cover
+				&.is-mail
+					background: url(../img/icons/dd-mail.png) no-repeat
+					+cover
+				&.is-tasks
+					background: url(../img/icons/dd-tasks.png) no-repeat
+					+cover
+				&.is-social
+					background: url(../img/icons/dd-social.png) no-repeat
+					+cover
+				&.is-settings
+					background: url(../img/icons/dd-settings.png) no-repeat
+					+cover
+			span
+				display: inline-block
+				vertical-align: middle
+				+fs(20)
+				+georgia
+				font-style: italic
+				letter-spacing: 0.15em
+				color: #404041  
+				+r(600)
+					+fs(16)
+	&__back
+		background: #efefef
+		padding: 20px 25px 25px 30px
+		margin-top: 3px
+		text-align: right
+		a
+			+vertical
+			.arr-back
+				display: inline-block
+				vertical-align: middle
+				width: 30px
+				height: 30px
+				background: url(../img/icons/dd-arr.png) no-repeat
+				+cover
+				margin-left: 15px
+			span
+				display: inline-block
+				vertical-align: middle
+				+fs(20)
+				+georgia
+				font-style: italic
+				color: #f06461 
 
 
 
