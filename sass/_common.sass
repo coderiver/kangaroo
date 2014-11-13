@@ -141,7 +141,7 @@ a
 	+reg
 	border: 1px solid #bbbdbf
 	padding: 0 50px 0 20px
-	height: 69px 
+	height: 61px 
 	+box
 	text-align: left
 	+r(480)
@@ -153,16 +153,20 @@ a
 		top: 10px
 		right: 20px
 		+r(768)
-			top: 5px
+			top: 10px
 			right: 10px
+		+r(480)
+			top: 5px
 		&:after
 			content: ""
 			+s(select-down)
 			position: absolute
 			top: 100%
-			margin-top: 15px
+			margin-top: 10px
 			left: 0
 			+r(1024)
+				margin-top: 10px
+			+r(480)
 				margin-top: 5px
 .select__text
 	position: relative

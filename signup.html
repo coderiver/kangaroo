@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- BEGIN  out-->
-<div class="out">
+<div class="out sign-p">
 	<div class="container-fluid section section-signin">
 		<div class="row vertical">
 			<div class="col-xs-12 middle">
@@ -22,35 +22,35 @@
 					<form action="">
 						<div class="form-in__inner">
 							<div class="form-in__label">
-								<span class="form-in__title">FIRST NAME</span>
-								<input type="text">
+								<label for="fn" class="form-in__title">FIRST NAME</label>
+								<input type="text" id="fn">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">Last NAME</span>
-								<input type="text">
+								<label for="ln" class="form-in__title">Last NAME</label>
+								<input type="text" id="ln">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">USERNAME</span>
-								<input type="text">
+								<label for="un" class="form-in__title">USERNAME</label>
+								<input type="text" id="un">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">Email</span>
-								<input type="text">
+								<label for="email" class="form-in__title">Email</label>
+								<input type="text" id="email">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">password</span>
-								<input type="password">
+								<label for="pass" class="form-in__title">password</label>
+								<input type="password" id="pass">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">Re-enter</span>
-								<input type="text">
+								<label for="re" class="form-in__title">Re-enter</label>
+								<input type="text" id="re">
 							</div>
 							<div class="form-in__label">
-								<span class="form-in__title">SECRET QUESTION</span>
+								<label for="quest" class="form-in__title">SECRET QUESTION</label>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Select form list</span>
 									<i></i>
-									<input type="hidden" class="js-select-input" value="0">
+									<input type="hidden" class="js-select-input" value="0" id="quest">
 									<ul class="select__list js-select-list">
 										<li data-id="0">Who are u?</li>
 										<li data-id="2">What did u see?</li>
@@ -64,14 +64,14 @@
 								<span class="form-in__title">Answer</span>
 								<input type="text">
 							</div>
-							<a href="#" class="button button_purple"><span>Sign Up</span></a>
+							<button class="button button_purple"><span>Sign Up</span></button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid footer">
+	<div class="container-fluid footer footer-absolute">
 		<div class="row">
 			<div class="col-xs12 footer__inner">
 				<div class="footer__left">

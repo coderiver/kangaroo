@@ -6,6 +6,13 @@
 		position: relative
 		+r(1200)
 			height: auto
+	&.sign-p
+		min-height: 100%
+		height: auto
+		position: relative
+		background: #c24f9c
+		+r(1200)
+			height: auto
 .green-filter
 	&:before
 		content: "" 
@@ -83,7 +90,8 @@
 	&-signin
 		background: #c24f9c
 		height: auto
-		padding: 90px 15px 90px 15px 
+		padding: 90px 15px 180px 15px 
+		+box
 		h1
 			+fs(64)
 			+georgia
@@ -408,23 +416,38 @@
 
 
 .form-in
-	width: 100%
+	width: 85%
 	float: none
 	margin: 70px auto 0
 	max-width: 1400px
+	+r(600)
+		width: 100%
+	form 
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 7px
+			left: 6px
+			right: -6px
+			bottom: -7px
+			background: #bbbdbf
 	&__inner
 		background: #fff
 		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
 		padding: 5%
+		position: relative
 		&:after
 			content: ""
 			width: 100%
 			display: inline-block
 		+r(1024)
 			text-align: center
-			padding: 30px 20px 30px
+			padding: 10%
+		+r(600)
+			padding: 20px 30px 
 	&__title
 		+fs(20.89)
 		+reg
@@ -436,7 +459,7 @@
 		text-align: left
 	&__label
 		display: inline-block
-		width: 47%
+		width: 45%
 		max-width: 600px
 		text-align: left
 		margin-bottom: 30px
@@ -446,7 +469,7 @@
 		input
 			width: 100%
 			+box
-			padding: 20px
+			padding: 15px
 			+fs(20.89)
 			color: #000
 			+reg
@@ -472,7 +495,7 @@
 	top: 0
 	left: 0
 	right: 0
-	min-height: 132px
+	min-height: 66px
 	+r(1200)
 		position: static
 		top: auto
@@ -480,9 +503,9 @@
 		right: auto
 	&__left
 		background: #a5496f
-		padding: 45px 15px 42px 15px 
+		padding: 10px 15px 10px 15px 
 		+box
-		height: 132px
+		height: 66px
 		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
@@ -535,7 +558,7 @@
 				width: 37px
 				height: 30px 
 	&__search
-		height: 132px
+		height: 66px
 		+vertical
 		text-align: left
 		position: relative
@@ -544,13 +567,14 @@
 			padding: 15px 15px 15px 
 			height: auto
 	.search__icon
-		+s(search-icon)
-		display: inline-block
-		vertical-align: middle
 		position: absolute
 		top: 50%
 		left: 30px
-		margin-top: -30px
+		margin-top: -20px
+		background: url(../img/icons/search-icon.png) no-repeat
+		+cover
+		width: 39px
+		height: 39px
 		+r(600)
 			background: url(../img/icons/search-icon.png) no-repeat
 			+cover
@@ -560,7 +584,6 @@
 	.search__input
 		display: inline-block
 		vertical-align: middle
-		padding: 20px 20px 10px 100px
 		position: relative
 		width: 100%
 		+box
@@ -569,16 +592,15 @@
 		letter-spacing: 0.075em  
 		+placeholder-color(rgba(187, 189, 191, 0.5))
 		background: none
+		+fs(22)
+		padding: 10px 15px 10px 50px 
 		// background-image: url(../img/icons/search-icon.png) left center no-repeat 
 		+r(600)
-			+fs(22)
-			padding: 10px 15px 10px 50px 
 	&__logo
 		text-align: right
 		a
 			margin-right: 30px
-			margin-top: 37px 
-			margin-bottom: 20px
+			margin-top: 5px 
 			display: inline-block
 			width: 100%
 			max-width: 268px
@@ -588,7 +610,7 @@
 				margin: 15px 15px 15px 
 .board
 	height: 100%
-	padding: 132px 15px 95px 15px
+	padding: 66px 15px 95px 15px
 	min-height: 825px
 	+r(1200)
 		min-height: 0
