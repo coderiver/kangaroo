@@ -495,7 +495,7 @@
 	top: 0
 	left: 0
 	right: 0
-	min-height: 66px
+	min-height: 60px
 	+r(1200)
 		position: static
 		top: auto
@@ -504,8 +504,8 @@
 	&__left
 		background: #a5496f
 		padding: 10px 15px 10px 15px 
+		height: 57px
 		+box
-		height: 66px
 		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
@@ -558,11 +558,11 @@
 				width: 37px
 				height: 30px 
 	&__search
-		height: 66px
 		+vertical
 		text-align: left
 		position: relative
 		padding-left: 30px
+		height: 57px
 		+r(600)
 			padding: 15px 15px 15px 
 			height: auto
@@ -571,15 +571,8 @@
 		top: 50%
 		left: 30px
 		margin-top: -20px
-		background: url(../img/icons/search-icon.png) no-repeat
-		+cover
-		width: 39px
-		height: 39px
+		+s(search)
 		+r(600)
-			background: url(../img/icons/search-icon.png) no-repeat
-			+cover
-			width: 39px
-			height: 39px 
 			left: 15px
 	.search__input
 		display: inline-block
@@ -587,30 +580,29 @@
 		position: relative
 		width: 100%
 		+box
-		+fs(29.54)
 		+reg
 		letter-spacing: 0.075em  
 		+placeholder-color(rgba(187, 189, 191, 0.5))
 		background: none
-		+fs(22)
+		+fs(18)
 		padding: 10px 15px 10px 50px 
-		// background-image: url(../img/icons/search-icon.png) left center no-repeat 
-		+r(600)
+		+r(480)
+			+fs(16)
 	&__logo
 		text-align: right
 		a
 			margin-right: 30px
-			margin-top: 5px 
+			margin-top: 7px 
 			display: inline-block
 			width: 100%
-			max-width: 268px
+			max-width: 200px
 			img
 				width: 100%
 			+r(600)
 				margin: 15px 15px 15px 
 .board
 	height: 100%
-	padding: 66px 15px 95px 15px
+	padding: 57px 15px 95px 15px
 	min-height: 825px
 	+r(1200)
 		min-height: 0
@@ -743,8 +735,8 @@
 			i
 				display: inline-block
 				vertical-align: middle
-				width: 50px
-				height: 50px
+				width: 47px
+				height: 47px
 				+border-radius(50%)
 				margin-right: 20px
 				+r(600)
@@ -774,13 +766,11 @@
 			span
 				display: inline-block
 				vertical-align: middle
-				+fs(20)
+				+fs(14)
 				+georgia
 				font-style: italic
 				letter-spacing: 0.15em
-				color: #404041  
-				+r(600)
-					+fs(16)
+				color: #404041 
 	&__back
 		background: #efefef
 		padding: 20px 25px 25px 30px
@@ -791,15 +781,15 @@
 			.arr-back
 				display: inline-block
 				vertical-align: middle
-				width: 30px
-				height: 30px
+				width: 27px
+				height: 27px
 				background: url(../img/icons/dd-arr.png) no-repeat
 				+cover
 				margin-left: 15px
 			span
 				display: inline-block
 				vertical-align: middle
-				+fs(20)
+				+fs(14)
 				+georgia
 				font-style: italic
 				color: #f06461 
