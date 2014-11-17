@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out in-p">
+	<div class="container-fluid navigation">
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 col-xs-12 navigation__left">
+				<span class="navigation__title">Hello, John</span>
+				<button class="navigation__button"></button>
+				<div class="dropdown">
+					<ul>
+						<li><a href="#"><i class="is-virtual"></i><span>My Virtual Machine</span></a></li>
+						<li><a href="#"><i class="is-cal"></i><span>My Calendar</span></a></li>
+						<li><a href="#"><i class="is-datacenter"></i><span>My Data Center</span></a></li>
+						<li><a href="#"><i class="is-mail"></i><span>My Mail</span></a></li>
+						<li><a href="#"><i class="is-tasks"></i><span>My Tasks</span></a></li>
+						<li><a href="#"><i class="is-social"></i><span>My Social Network</span></a></li>
+						<li><a href="#"><i class="is-settings"></i><span>My User Settings</span></a></li>
+					</ul>
+					<div class="dropdown__back">
+						<a href="#"><span>Log Out</span><i class="arr-back"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-sm-6 col-xs-12 navigation__search">
+				<i class="search__icon"></i>
+				<input type="text" class="search__input" placeholder="Start typing your search ...">
+			</div>
+			<div class="col-lg-4 col-sm-12 col-xs-12 navigation__logo">
+				<a href="#"><img src="img/nav-logo.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid board">
+		<div class="row board__inner is-account">
+			<div class="col-xs-12">
+				<div class="row topper">
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="row">
+							<a href="#" class="is-active"><span class="sidebar__icon is-settings"><i class="is-settings"></i></span><span class="sidebar__text">My User Settings</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 sidebar">
+				<div class="row">
+					<ul class="sidebar__menu">
+						<li><a href="#"><span class="sidebar__icon"><i class="is-prof"></i></span><span class="sidebar__text">MY PROFILE</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-edit"></i></span><span class="sidebar__text">EDIT PROFILE</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-avatar"></i></span><span class="sidebar__text">AVATAR</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-customize"></i></span><span class="sidebar__text">CUSTOMIZE</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-friends"></i></span><span class="sidebar__text">INVITE FRIENDS</span></a></li>
+					</ul>
+					<span class="sidebar__title">CUSTOM INTERFACE</span>
+					<div class="sidebar__row">
+						<div class="sidebar__box">
+							<ul class="colors">
+								<li><a href="#" class="is-one"></a></li>
+								<li><a href="#" class="is-two"></a></li>
+								<li><a href="#" class="is-three"></a></li>
+								<li><a href="#" class="is-four"></a></li>
+							</ul>
+							<span class="sidebar__label">Cool</span>
+						</div>
+						<div class="sidebar__box">
+							<ul class="colors">
+								<li><a href="#" class="is-five"></a></li>
+								<li><a href="#" class="is-six"></a></li>
+								<li><a href="#" class="is-seven"></a></li>
+								<li><a href="#" class="is-eight"></a></li>
+							</ul>
+							<span class="sidebar__label">Warm</span>
+						</div>
+						<div class="sidebar__box sidebar__box_mod">
+							<ul class="colors">
+								<li><a href="#" class="is-nine"></a></li>
+								<li><a href="#" class="is-ten"></a></li>
+								<li><a href="#" class="is-eleven"></a></li>
+								<li><a href="#" class="is-twelve"></a></li>
+							</ul>
+							<span class="sidebar__label">Colorful</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-9 col-sm-6 col-xs-12 content">
+				<form action="" class="registerForm">
+					<div class="row content__form">
+						<div class="form-in__label form-group">
+							<label for="fn" class="content__label">FIRST NAME</label>
+							<input type="text" class="form-control" id="fn" name="username">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="ln" class="content__label">Last NAME</label>
+							<input type="text" class="form-control" id="ln" name="username">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="un" class="content__label">USERNAME</label>
+							<input type="text" class="form-control" id="un" name="username">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="email" class="content__label">Email</label>
+							<input type="email" class="form-control" id="email" name="email">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="pass" class="content__label">password</label>
+							<input type="password" class="form-control" id="pass" name="password">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="re" class="content__label">Re-enter</label>
+							<input type="password" class="form-control" id="re" name="confirmPassword">
+						</div>
+						<div class="form-in__label form-group">
+							<label for="quest" class="content__label">SECRET QUESTION</label>
+							<div class="select js-select">
+								<span class="select__text js-select-text">Select form list</span>
+								<i></i>
+								<input type="hidden" class="js-select-input" value="0" id="quest">
+								<ul class="select__list js-select-list">
+									<li data-id="0">Who are u?</li>
+									<li data-id="2">What did u see?</li>
+									<li data-id="3">I see dead people</li>
+									<li data-id="4">But it still better</li>
+									<li data-id="4">Than watching Twilight</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-in__label form-group">
+							<label class="content__label" for="ans">Answer</label>
+							<input type="text" class="form-control" id="ans" name="username">
+						</div>
+					</div>
+					<div class="row content__button">
+						<i></i>
+						<button class="button button_purple btn-default"><span>Save</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid footer footer-absolute">
+		<div class="row">
+			<div class="col-xs12 footer__inner">
+				<div class="footer__left">
+					<ul class="footer__nav">
+						<li><a href="#"><i class="share"></i></a></li>
+						<li><a href="#">SUPPORT</a></li>
+						<li><a href="#">ABOUT</a></li>
+					</ul>
+				</div>
+				<a href="#" class="footer__copyright"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

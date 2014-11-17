@@ -13,6 +13,10 @@
 		background: #c24f9c
 		+r(1200)
 			height: auto
+	&.in-p
+		min-height: 100%
+		height: auto
+		position: relative
 .green-filter
 	&:before
 		content: "" 
@@ -496,6 +500,8 @@
 			top: auto !important
 			bottom: 15px !important
 			right: 10px
+			+r(480)
+				bottom: 10px !important
 		small
 			height: 0 !important
 			display: none !important
@@ -611,11 +617,17 @@
 		+r(480)
 			+fs(16)
 	&__logo
+		+vertical
 		text-align: right
+		height: 57px
+		+r(600)
+			height: auto
 		a
 			margin-right: 30px
 			margin-top: 7px 
+			margin-bottom: 7px
 			display: inline-block
+			vertical-align: middle
 			width: 100%
 			max-width: 200px
 			img
@@ -817,11 +829,181 @@
 				color: #f06461 
 
 
-
-
-
-
-
+//account
+.topper
+	.is-active
+		display: block
+		padding: 0 20px 0 20px
+		height: 83px
+		+vertical
+		background: #f2f3f3 
+		text-align: left
+		span
+			color: #404041
+			text-transform: none
+			+georgia
+			font-style: italic
+.sidebar
+	+r(768)
+		padding-bottom: 50px
+	&__menu
+		margin-bottom: 25px
+		li
+			padding-top: 3px
+			a
+				display: block
+				padding: 0px 20px 0px 20px
+				height: 83px
+				+vertical
+				text-align: left
+	&__text
+		+ttu
+		+reg
+		+fs(16.25)
+		letter-spacing: 0.15em
+		color: #ffffff 
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		width: 52px
+		margin-right: 20px
+		+vertical
+		&.is-settings
+			background: #c24f9c
+			width: 47px
+			height: 47px
+			+border-radius(50%)
+			margin-right: 25px
+		i
+			display: inline-block
+			vertical-align: middle
+			&.is-prof
+				+s(is-prof)
+			&.is-edit
+				+s(is-edit)
+			&.is-avatar
+				+s(is-avatar)
+			&.is-customize
+				+s(is-customize)
+			&.is-friends
+				+s(is-friends)
+			&.is-settings
+				+s(is-settings)
+		&:hover
+			text-decoration: none
+	&__title, &__label
+		+fs(16.25)
+		letter-spacing: 0.15em
+		+reg
+		color: #bbbdbf
+		display: block
+		padding: 0 18px 0 18px 
+		margin-bottom: 20px
+		+ttu
+	&__row
+		border-top: 1px solid #bbbdbf 
+	&__box
+		border: 1px solid #bbbdbf
+		border-top: none
+		+vertical
+		text-align: left
+		height: 84px
+		&_mod
+			border: none
+			background: #f1f2f2 
+	&__label
+		line-height: 45px
+		padding: 0
+		margin: 0
+		display: inline-block
+		text-transform: none
+		vertical-align: middle
+	.colors
+		+fs(0)
+		padding: 0 24px 0 20px
+		display: inline-block
+		vertical-align: middle
+		li
+			display: inline-block
+			padding: 4px
+		a
+			display: block
+			width: 20px
+			height: 20px
+			+border-radius(50%)
+			&.is-one
+				background: #6ac3a3 
+			&.is-two
+				background: #58c1b5 
+			&.is-three
+				background: #2096a3 
+			&.is-four
+				background: #245477 
+			&.is-five
+				background: #e5b944 
+			&.is-six
+				background: #ea9d4f 
+			&.is-seven
+				background: #d1695e 
+			&.is-eight
+				background: #b576a5 
+			&.is-nine
+				background: #f06461 
+			&.is-ten
+				background: #c24f9c 
+			&.is-eleven
+				background: #00a6cb 
+			&.is-twelve
+				background: #01a69e 
+.content
+	+r(768)
+		padding-bottom: 50px
+	form
+		padding: 0 4% 0 6%
+		width: 100%
+	&__form
+		text-align: justify
+		+fs(0.1)
+		&:after
+			content: "" 
+			display: inline-block
+			width: 100%
+		.form-group
+			display: inline-block
+			vertical-align: top
+			width: 46%
+			margin-bottom: 50px
+			+r(1200)
+				width: 100%
+				display: block
+				margin: 0 auto 50px
+	&__label
+		+fs(12.53)
+		+reg
+		letter-spacing: 0.15em
+		color: #c24f9c
+		margin-bottom: 20px
+		+ttu 
+	&__button
+		+vertical
+		text-align: right
+		i
+			display: inline-block
+			vertical-align: middle
+			+s(save)
+		button
+			display: inline-block
+			vertical-align: middle
+			margin-left: 13px
+			max-width: 193px
+.is-account
+	.sidebar__menu
+		a
+			background: #c24f9c 
+			&:hover
+				background: #ce72b0 
 
 
 
