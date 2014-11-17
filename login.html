@@ -17,23 +17,25 @@
 		<div class="green-filter">
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="login">
-						<button class="button button_yellow">
-							<span>Sign up for free!</span>
-						</button>
-						<label for="" class="login__input login__username">
-							<i></i>
-							<input type="text" value="USERNAME" onfocus="if (this.value=='USERNAME') this.value='';" onblur="if (this.value==''){this.value='USERNAME'}">
-						</label>
-						<label for="" class="login__input login__password">
-							<i></i>
-							<input type="password" value="PASSWORD" onfocus="if (this.value=='PASSWORD') this.value='';" onblur="if (this.value==''){this.value='PASSWORD'}">
-						</label>
-						<button class="button button_white" type="submit">
-							<span>Log in</span>
-						</button>
-						<a href="#" class="login__forgot">Forgot Password?</a>
-					</div>
+					<form action="" role="form" class="registerForm">
+						<div class="login">
+							<button class="button button_yellow">
+								<span>Sign up for free!</span>
+							</button>
+							<label for="" class="login__input login__username form-group">
+								<i class="log-ico"></i>
+								<input type="text" value="USERNAME" onfocus="if (this.value=='USERNAME') this.value='';" onblur="if (this.value==''){this.value='USERNAME'}" class="form-control" name="username">
+							</label>
+							<label for="" class="login__input login__password form-group">
+								<i class="log-ico"></i>
+								<input type="password" value="PASSWORD" onfocus="if (this.value=='PASSWORD') this.value='';" onblur="if (this.value==''){this.value='PASSWORD'}" class="form-control" id="un" name="password">
+							</label>
+							<button class="button button_white" type="submit">
+								<span>Log in</span>
+							</button>
+							<a href="#" class="login__forgot">Forgot Password?</a>
+						</div>
+					</form>
 				</div>
 				<div class="lang">
 					<ul>

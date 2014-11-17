@@ -108,15 +108,17 @@ a { text-decoration: none; }
 .login { float: right; *zoom: 1; width: 100%; max-width: 380px; text-align: center; }
 .login:after { content: " "; display: table; clear: both; }
 .login .button { display: block; margin-bottom: 20px; }
-.login__forgot { font-size: 12.53px; font-family: "ProximaNova Bold", Arial, sans-serif; color: white; letter-spacing: 0.15em; display: inline-block; margin-top: 5px; }
-.login__forgot:hover { border-bottom: 1px solid white; }
+.login__forgot { font-size: 12.53px; font-family: "ProximaNova Bold", Arial, sans-serif; color: white; letter-spacing: 0.15em; display: inline-block; margin-top: 5px; background: none; }
+.login__forgot:hover { text-decoration: underline; color: white; }
 .login__input { position: relative; display: block; margin-bottom: 20px; }
-.login__input i { display: block; position: absolute; top: 50%; }
-.login__input input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 18px 18px 18px 60px; font-size: 16.25px; letter-spacing: 0.15em; font-family: "ProximaNova Regular", Arial, sans-serif; color: white; background: none; border: 2px solid white; }
+.login__input .log-ico { display: block; position: absolute; top: 50%; }
+.login__input input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 18px 18px 18px 60px; height: auto !important; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; font-size: 16.25px; letter-spacing: 0.15em; font-family: "ProximaNova Regular", Arial, sans-serif; color: white; background: none; border: 2px solid white; }
 .login__input input:-moz-placeholder, .login__input input::-moz-placeholder { color: white; opacity: 1; }
 .login__input input::-webkit-input-placeholder { color: white; }
-.login__username i { left: 10px; margin-top: -19px; background: url('../img/icons-sb5b88fdcca.png') 0 -3946px no-repeat; width: 33px; height: 37px; }
-.login__password i { left: 12px; margin-top: -20px; background: url('../img/icons-sb5b88fdcca.png') 0 -3560px no-repeat; width: 30px; height: 40px; }
+.login__input .glyphicon { top: 50% !important; margin-top: -17px; font-size: 30px; right: 10px; }
+.login__input small { height: 0 !important; display: none !important; }
+.login__username .log-ico { left: 10px; margin-top: -19px; background: url('../img/icons-sb5b88fdcca.png') 0 -3946px no-repeat; width: 33px; height: 37px; }
+.login__password .log-ico { left: 12px; margin-top: -20px; background: url('../img/icons-sb5b88fdcca.png') 0 -3560px no-repeat; width: 30px; height: 40px; }
 
 .logo { margin-bottom: 30px; display: inline-block; width: 100%; max-width: 382px; }
 .logo img { width: 100%; }
@@ -209,8 +211,10 @@ a { text-decoration: none; }
 .form-in__title { font-size: 20.89px; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; color: #c24f9c; text-transform: uppercase; margin-bottom: 15px; display: block; text-align: left; }
 .form-in__label { display: inline-block; width: 45%; max-width: 600px; text-align: left; margin-bottom: 30px; vertical-align: top; }
 @media only screen and (max-width: 1024px) { .form-in__label { width: 100%; } }
-.form-in__label input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 15px; font-size: 20.89px; color: black; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; border: 1px solid #bbbdbf; }
+.form-in__label input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 15px; font-size: 20.89px; color: black; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; border: 1px solid #bbbdbf; height: auto !important; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }
 @media only screen and (max-width: 480px) { .form-in__label input { padding: 10px; } }
+.form-in__label .glyphicon { font-size: 30px; top: auto !important; bottom: 15px !important; right: 10px; }
+.form-in__label small { height: 0 !important; display: none !important; }
 .form-in .button { float: right; margin-top: 10px; }
 .form-in .button span { font-size: 20.89px; padding: 20px; }
 @media only screen and (max-width: 480px) { .form-in .button span { padding: 15px; } }

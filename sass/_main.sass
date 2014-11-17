@@ -189,13 +189,15 @@
 		letter-spacing: 0.15em
 		display: inline-block
 		margin-top: 5px 
+		background: none
 		&:hover
-			border-bottom: 1px solid #fff 
+			text-decoration: underline
+			color: #fff  
 	&__input
 		position: relative
 		display: block
 		margin-bottom: 20px
-		i
+		.log-ico
 			display: block
 			position: absolute
 			top: 50%
@@ -203,6 +205,8 @@
 			width: 100%
 			+box
 			padding: 18px 18px 18px 60px
+			height: auto !important
+			+border-radius(0px)
 			+fs(16.25)
 			letter-spacing: 0.15em
 			+reg
@@ -210,13 +214,21 @@
 			background: none
 			border: 2px solid #fff
 			+placeholder-color(#fff)
+		.glyphicon
+			top: 50% !important 
+			margin-top: -17px
+			+fs(30)
+			right: 10px
+		small
+			height: 0 !important
+			display: none !important
 	&__username
-		i
+		.log-ico
 			left: 10px 
 			margin-top: -19px
 			+s(person)
 	&__password
-		i
+		.log-ico
 			left: 12px 
 			margin-top: -20px
 			+s(lock)
@@ -475,8 +487,18 @@
 			+reg
 			letter-spacing: 0.15em
 			border: 1px solid #bbbdbf 
+			height: auto !important
+			+border-radius(0px)
 			+r(480)
 				padding: 10px 
+		.glyphicon
+			+fs(30)
+			top: auto !important
+			bottom: 15px !important
+			right: 10px
+		small
+			height: 0 !important
+			display: none !important
 	.button
 		float: right
 		margin-top: 10px
@@ -793,7 +815,6 @@
 				+georgia
 				font-style: italic
 				color: #f06461 
-
 
 
 

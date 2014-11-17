@@ -6,6 +6,7 @@
 	<meta name="viewport" content="initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <meta name="viewport" content="width=1200"> -->
+    <!-- Include FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
 	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -19,33 +20,33 @@
 				<h1 class="heading">Welcome to Kangaroo!</h1>
 				<p>First, let’s fill in some basic info to get you started.</p>
 				<div class="row form-in">
-					<form action="">
+					<form action="" role="form" class="registerForm">
 						<div class="form-in__inner">
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="fn" class="form-in__title">FIRST NAME</label>
-								<input type="text" id="fn">
+								<input type="text" class="form-control" id="fn" name="username">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="ln" class="form-in__title">Last NAME</label>
-								<input type="text" id="ln">
+								<input type="text" class="form-control" id="ln" name="username">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="un" class="form-in__title">USERNAME</label>
-								<input type="text" id="un">
+								<input type="text" class="form-control" id="un" name="username">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="email" class="form-in__title">Email</label>
-								<input type="text" id="email">
+								<input type="email" class="form-control" id="email" name="email">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="pass" class="form-in__title">password</label>
-								<input type="password" id="pass">
+								<input type="password" class="form-control" id="pass" name="password">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="re" class="form-in__title">Re-enter</label>
-								<input type="text" id="re">
+								<input type="password" class="form-control" id="re" name="confirmPassword">
 							</div>
-							<div class="form-in__label">
+							<div class="form-in__label form-group">
 								<label for="quest" class="form-in__title">SECRET QUESTION</label>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Select form list</span>
@@ -60,11 +61,11 @@
 									</ul>
 								</div>
 							</div>
-							<div class="form-in__label">
-								<span class="form-in__title">Answer</span>
-								<input type="text">
+							<div class="form-in__label form-group">
+								<label class="form-in__title" for="ans">Answer</label>
+								<input type="text" class="form-control" id="ans" name="username">
 							</div>
-							<button class="button button_purple"><span>Sign Up</span></button>
+							<button class="button button_purple btn-default"><span>Sign Up</span></button>
 						</div>
 					</form>
 				</div>
