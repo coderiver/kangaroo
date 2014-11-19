@@ -485,9 +485,9 @@ input::-webkit-input-placeholder { color: #bbbdbf; }
 .popup .select__list li:hover { color: white; background: #e78c41; }
 .popup__bottom { text-align: right; padding-bottom: 22px; }
 .popup__button { background: none; color: #e78c41; font-size: 16.25px; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; margin-left: 25px; }
+.popup__button:hover { text-decoration: underline; background: none; color: #e78c41; }
 .popup__button_mod { color: #bbbdbf; }
 .popup__button_mod:hover { color: #bbbdbf; }
-.popup__button:hover { text-decoration: underline; background: none; color: #e78c41; }
 .popup textarea, .popup input { width: 100%; padding: 18px 22px; }
 .popup textarea { height: 110px; resize: none; margin-bottom: 20px; }
 .popup input { max-width: 295px; display: inline-block; }
