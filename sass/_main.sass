@@ -534,10 +534,17 @@
 		padding: 10px 15px 10px 15px 
 		height: 57px
 		+box
-		text-align: justify
 		+fs(0.1)
 		word-spacing: 0px
 		+tr(background 0.5s)
+		text-align: justify
+		&_mod
+			background: #c24f9c
+			.navigation__title
+				+fs(16.25)
+				padding: 7px 0 0 15px
+			.navigation__button
+				margin: 7px 30px 0 0 
 		&.is-active
 			background: #efefef
 			.navigation__title
@@ -545,6 +552,7 @@
 		&:after
 			content: ""
 			width: 100%
+			height: 1px
 			display: inline-block
 		+r(600)
 			height: auto
@@ -830,32 +838,28 @@
 
 
 //account
-.topper
-	.is-active
-		display: block
-		padding: 0 20px 0 20px
-		height: 83px
-		+vertical
-		background: #f2f3f3 
-		text-align: left
-		span
-			color: #404041
-			text-transform: none
-			+georgia
-			font-style: italic
 .sidebar
 	+r(768)
 		padding-bottom: 50px
 	&__menu
 		margin-bottom: 25px
 		li
-			padding-top: 3px
+			padding-top: 2px
 			a
 				display: block
 				padding: 0px 20px 0px 20px
-				height: 83px
+				height: 67px
 				+vertical
 				text-align: left
+				&.is-active
+					background: #f2f3f3 
+					span
+						color: #404041
+						text-transform: none
+						+georgia
+						font-style: italic
+					&:hover
+						background: #f2f3f3 
 	&__text
 		+ttu
 		+reg
@@ -870,12 +874,15 @@
 		width: 52px
 		margin-right: 20px
 		+vertical
-		&.is-settings
-			background: #c24f9c
+		&.is-active
 			width: 47px
 			height: 47px
 			+border-radius(50%)
 			margin-right: 25px
+		&.is-acc
+			background: #c24f9c
+		&.is-soc
+			background: #e78c41
 		i
 			display: inline-block
 			vertical-align: middle
@@ -891,6 +898,19 @@
 				+s(is-friends)
 			&.is-settings
 				+s(is-settings)
+			&.is-network
+				+s(is-network)
+			&.is-stream
+				+s(is-stream)
+			&.is-sync
+				+s(is-sync)
+			&.is-set
+				+s(is-set)
+			&.is-post
+				+s(is-post)
+			&.is-edit-ac
+				margin-left: 8px
+				+s(is-edit-ac)
 		&:hover
 			text-decoration: none
 	&__title, &__label
@@ -966,6 +986,9 @@
 	&__form
 		text-align: justify
 		+fs(0.1)
+		padding-top: 67px
+		+r(768)
+			padding-top: 0
 		&:after
 			content: "" 
 			display: inline-block
@@ -979,13 +1002,9 @@
 				width: 100%
 				display: block
 				margin: 0 auto 50px
-	&__label
+	.form-in__title
 		+fs(12.53)
-		+reg
-		letter-spacing: 0.15em
-		color: #c24f9c
 		margin-bottom: 20px
-		+ttu 
 	&__button
 		+vertical
 		text-align: right
@@ -1004,47 +1023,468 @@
 			background: #c24f9c 
 			&:hover
 				background: #ce72b0 
+.is-social
+	.sidebar__menu
+		a
+			background: #e78c41 
+			&:hover
+				background: #eca367 
 
 
 
 
+//mysocial
+.box
+	margin-bottom: 50px
+	&-wrap
+		padding-top: 67px
+		+r(768)
+			padding-top: 0
+	&__top
+		border-bottom: 1px solid #a0a1a3 
+		padding-right: 40px
+		position: relative
+		padding-bottom: 17px
+		margin-bottom: 35px
+	&__title
+		+fs(16.25)
+		+reg
+		color: #58595b
+		letter-spacing: 0.15em  
+		+ttu
+	&__button
+		position: absolute
+		top: 0
+		right: 0
+		cursor: pointer
+		&.is-open
+			+s(box-close)
+		&.is-close
+			+s(box-open)
+	&__social
+		+fs(0)
+		li
+			display: inline-block
+			padding-right: 4px
+			padding-bottom: 4px
+			vertical-align: top
+		a
+			display: block
+			+vertical 
+		span
+			display: inline-block
+		.is-twitter
+			+s(box-twitter)
+		.is-facebook
+			+s(box-facebook)
+		.is-google
+			+s(box-google)
+		.is-linkedin
+			+s(box-linkedin)
+	&__accounts
+		+fs(0)
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 4px
+			padding-bottom: 4px
+			a
+				display: block
+				+vertical
+				background: #e78c41
+				padding: 20px 10px
+				height: 80px
+				position: relative
+				&.is-grey
+					background: #bbbdbf 
+			span
+				display: inline-block
+				vertical-align: middle
+				+fs(16.44)
+				+reg
+				letter-spacing: 0.15em 
+				color: #FFF 
+			.box__icon
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+				&.is-twitter
+					+s(box-tw)
+				&.is-fb
+					+s(box-fb)
+				&.is-vimeo
+					+s(box-vimeo)
+			.is-close
+				position: absolute
+				top: 8px
+				right: 8px
+				+s(box-close-icon)
+				cursor: pointer
+	&-open
+		.box__title
+			color: #e78c41
+
+
+
+.items
+	&__top
+		margin: 0 35px 30px 35px
+		+fs(0)
+		+r(480)
+			margin: 0 0 30px
+	&__title, a
+		display: inline-block
+		vertical-align: top
+		color: #58595b
+		+reg
+		+fs(16.25)
+		letter-spacing: 0.15em
+	&__title
+		margin-right: 50px
+		margin-bottom: 15px
+		+r(768)
+			margin-right: 20px
+	&__list
+		display: inline-block
+		li
+			display: inline-block
+			padding: 0 18px
+			+r(768)
+				padding: 0 30px 0 0
+		a
+			color: #e78c41
+			padding: 0 3px 13px 3px 
+			display: block
+			&:hover
+				text-decoration: none
+			&.is-active
+				border-bottom: 3px solid #e78c41
+.item
+	position: relative
+	background: #fff 
+	&-wrap
+		margin: 0 5% 14% 5%
+		+r(480)
+			margin: 0 0 30px 0  
+		position: relative
+		&:before
+			position: absolute
+			top: 3px
+			left: 5px
+			right: -5px
+			bottom: -6px
+			content: "" 
+			background: #bbbdbf 
+	&__inner
+		padding: 38px 36px 38px 32px
+		border: 1px solid #f1f1f2
+		border-bottom: none 
+	p
+		+fs(17.78)
+		line-height: 28.73px
+		letter-spacing: 0.15em 
+		color: #808184
+		+reg
+		strong
+			+bold
+			font-weight: normal
+	&__link
+		display: block
+	&__bottom
+		padding: 22px 30px 22px 26px 
+		&.is-azure
+			background: #2aa9e0 
+		&.is-red
+			background: #db5442 
+		&.is-blue
+			background: #36609f 
+	&__left
+		padding-right: 120px
+		+vertical
+		text-align: left
+	&__right
+		float: right
+		height: 42px
+		+vertical
+	&__name
+		+georgia
+		+fs(16.25)
+		font-style: italic
+		letter-spacing: 0.15em 
+		color: #fff
+		display: inline-block
+		vertical-align: middle
+	&__date
+		+reg
+		+fs(17.78)
+		letter-spacing: 0.15em 
+		color: #fff
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		width: 70px
+		+vertical
+		text-align: left
+		height: 42px
+		i
+			display: inline-block
+			vertical-align: middle
+			&.item__twitter
+				+s(item-twitter)
+			&.item__fb
+				+s(item-fb)
+			&.item__google
+				+s(item-google)
+	&__img
+		margin-bottom: 30px
+		overflow: hidden
+		img
+			width: 100%
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.overlay
+	background: #e78c41
+	+opacity(0.69)
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0  
+	z-index: 999
+	display: none
+	&.is-open
+		display: block
+.js-popups
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0  
+	z-index: 1050
+	+vertical
+	overflow: auto
+	min-width: 320px
+	display: none
+	&.is-open
+		display: block
+.popup
+	display: none
+	vertical-align: middle
+	position: relative
+	max-width: 725px
+	background: #fff 
+	width: 100%
+	&.is-open
+		display: inline-block
+	&__close
+		position: absolute
+		width: 39px
+		height: 39px
+		border: 2px solid #fff
+		+border-radius(50%)
+		top: 20px
+		right: 19px
+		+vertical
+		cursor: pointer
+		i
+			display: inline-block
+			vertical-align: middle
+			+s(box-close-icon)
+	&__top
+		background: #e78c41
+		height: 79px
+		+vertical
+		text-align: left
+		padding: 0 65px 0 24px 
+	&__heading, &__title
+		display: inline-block
+		vertical-align: middle
+		+fs(16.25)
+		+reg
+		letter-spacing: 0.15em 
+		color: #fff
+	&__title
+		margin-bottom: 25px
+		display: block
+		color: #e78c41  
+	&__inner
+		padding: 22px 22px 0 22px
+		text-align: left
+	&__list
+		+fs(0)
+		text-align: center
+		margin-bottom: 20px
+		padding-top: 23px
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 2px
+			width: 88px
+		a
+			display: block
+			&.popup-twitter
+				+s(box-twitter)
+			&.popup-facebook
+				+s(box-facebook)
+			&.popup-google
+				+s(box-google)
+			&.popup-linkedin
+				+s(box-linkedin)
+	.select
+		max-width: 340px
+		margin: 0 auto 25px
+		height: 58px
+		i
+			+s(popup-arr-top)
+			top: 12px
+			right: 14px
+			&:after
+				+s(popup-arr-bot)
+				margin-top: 14px
+		&__text
+			color: #58595b
+			+fs(16.25)
+			+reg
+			letter-spacing: 0.15em 
+			height: auto
+		&__list
+			li
+				color: #58595b 
+				+fs(16.25)
+				+reg
+				letter-spacing: 0.15em
+				&:hover
+					color: #fff
+					background: #e78c41  
+	&__bottom
+		text-align: right
+		padding-bottom: 22px
+	&__button
+		background: none
+		color: #e78c41 
+		+fs(16.25)
+		+reg
+		letter-spacing: 0.15em 
+		margin-left: 25px
+		&_mod
+			color: #bbbdbf 
+			&:hover
+				color: #bbbdbf 
+		&:hover
+			text-decoration: underline
+			background: none
+			color: #e78c41  
+	textarea, input
+		width: 100%
+		+box
+		padding: 18px 22px 
+		color: #58595b
+		+fs(16.25)
+		+reg
+		letter-spacing: 0.15em 
+		+placeholder-color(#bbbdbf)
+		border: 1px solid #adafb1
+	textarea
+		height: 110px
+		resize: none
+		margin-bottom: 20px
+	input
+		max-width: 295px
+		display: inline-block
+	&__links
+		display: inline-block
+	&__bottom_mod
+		text-align: justify
+		+fs(0.1)
+		word-spacing: 0px
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
+		input
+			vertical-align: middle
+			margin-bottom: 22px
+		ul
+			display: inline-block
+			vertical-align: middle
+			+vertical
+			margin-bottom: 22px
+		li
+			display: inline-block
+			vertical-align: middle
+			padding: 0 13px
+		i
+			display: block
+			&.is-geo
+				+s(popup-geo)
+			&.is-image
+				+s(popup-image)
+			&.is-calendar
+				+s(popup-calendar)
+			&.is-geo_grey
+				+s(popup-geo-grey)
+			&.is-image_grey
+				+s(popup-image-grey)
+	&__buttons
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 22px
+	&_left
+		text-align: left
+		input
+			margin-right: 20px
+	hr
+		border-top: 1px solid #dddedf
+		border-bottom: 1px solid #eeeeef
+		border-left: none
+		border-right: none
+		width: 100%  
+		margin: 0 
+	&__date
+		+vertical
+		text-align: left
+		padding-bottom: 15px
+		div
+			display: inline-block
+			vertical-align: middle
+			+vertical
+			vertical-align: top
+		label
+			color: #58595b
+			+fs(16.25)
+			+reg
+			letter-spacing: 0.15em 
+			display: inline-block
+			vertical-align: middle
+			margin: 0 20px 10px 10px 
+		input
+			margin-right: 10px
+			margin-bottom: 10px
+		.glyphicon
+			+fs(20)
+			top: 3px !important
+			bottom: auto !important
+		.form-control-feedback
+			line-height: 20px
+			width: 20px
+			height: 20px
+	.popup__input-lil
+		width: 65px 
+		padding: 18px 10px
+		text-align: center 
+	.popup__input-time
+		width: 95px 
+		padding: 18px 10px
+		text-align: center
+	.form-in__label
+		display: inline-block
+		width: auto
+		vertical-align: middle
+		margin: 0
 
 
 

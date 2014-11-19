@@ -103,7 +103,98 @@ head.ready(function() {
                         message: 'The input is not a valid email address'
                     }
                 }
+            },
+            dd: {
+                validators: {
+                    date: {
+                        format: 'DD',
+                        message: 'The value is not a valid date'
+                    }
+                }
+            },
+            mm: {
+                validators: {
+                    date: {
+                        format: 'MM',
+                        message: 'The value is not a valid date'
+                    }
+                }
+            },
+            yy: {
+                validators: {
+                    date: {
+                        format: 'YY',
+                        message: 'The value is not a valid date'
+                    }
+                }
             }
         }
     });
+
+
+	//calendar
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'today',
+			right: 'month,agendaWeek,agendaDay',
+			center: 'prev,title,next'
+		},
+		defaultDate: '2014-11-12',
+		editable: true,
+		eventLimit: true, // allow "more" link when too many events
+		events: [
+			{
+				title: 'Clean...',
+				start: '2014-11-03'
+			},
+			{
+				title: 'Clean...',
+				start: '2014-11-10'
+			},
+			{
+				title: 'Clean...',
+				start: '2014-11-17'
+			},
+			{
+				title: 'wtf...',
+				start: '2014-11-17'
+			},
+			{
+				title: 'wtf2...',
+				start: '2014-11-17'
+			},
+			{
+				title: 'Clean...',
+				start: '2014-11-24'
+			},
+			{
+				title: 'Clean...',
+				start: '2014-12-01'
+			}
+		]
+	});
+	$('.js-account').on('click', function() {
+		$('.js-popup1').addClass('is-open');
+		$('.overlay').addClass('is-open');
+		$('.js-popups').addClass('is-open');
+		return false;
+	});
+	$('.js-post').on('click', function() {
+		$('.js-popup2').addClass('is-open');
+		$('.overlay').addClass('is-open');
+		$('.js-popups').addClass('is-open');
+		return false;
+	});
+	$('.js-date').on('click', function() {
+		$('.js-popup3').addClass('is-open');
+		$('.overlay').addClass('is-open');
+		$('.js-popups').addClass('is-open');
+		$('.js-popup2').removeClass('is-open');
+		return false;
+	});
+	$('.popup__close').on('click', function() {
+		$('.popup').removeClass('is-open');
+		$('.overlay').removeClass('is-open');
+		$('.js-popups').removeClass('is-open');
+	});
 });

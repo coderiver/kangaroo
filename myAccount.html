@@ -15,7 +15,7 @@
 <div class="out in-p">
 	<div class="container-fluid navigation">
 		<div class="row">
-			<div class="col-lg-3 col-sm-6 col-xs-12 navigation__left">
+			<div class="col-lg-3 col-sm-6 col-xs-12 navigation__left navigation__left_mod">
 				<span class="navigation__title">Hello, John</span>
 				<button class="navigation__button"></button>
 				<div class="dropdown">
@@ -44,18 +44,10 @@
 	</div>
 	<div class="container-fluid board">
 		<div class="row board__inner is-account">
-			<div class="col-xs-12">
-				<div class="row topper">
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="row">
-							<a href="#" class="is-active"><span class="sidebar__icon is-settings"><i class="is-settings"></i></span><span class="sidebar__text">My User Settings</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-12 sidebar">
 				<div class="row">
 					<ul class="sidebar__menu">
+						<li><a href="#" class="is-active"><span class="sidebar__icon is-active is-acc"><i class="is-settings"></i></span><span class="sidebar__text">My User Settings</span></a></li>
 						<li><a href="#"><span class="sidebar__icon"><i class="is-prof"></i></span><span class="sidebar__text">MY PROFILE</span></a></li>
 						<li><a href="#"><span class="sidebar__icon"><i class="is-edit"></i></span><span class="sidebar__text">EDIT PROFILE</span></a></li>
 						<li><a href="#"><span class="sidebar__icon"><i class="is-avatar"></i></span><span class="sidebar__text">AVATAR</span></a></li>
@@ -99,31 +91,31 @@
 				<form action="" class="registerForm">
 					<div class="row content__form">
 						<div class="form-in__label form-group">
-							<label for="fn" class="content__label">FIRST NAME</label>
+							<label for="fn" class="form-in__title">FIRST NAME</label>
 							<input type="text" class="form-control" id="fn" name="username">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="ln" class="content__label">Last NAME</label>
+							<label for="ln" class="form-in__title">Last NAME</label>
 							<input type="text" class="form-control" id="ln" name="username">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="un" class="content__label">USERNAME</label>
+							<label for="un" class="form-in__title">USERNAME</label>
 							<input type="text" class="form-control" id="un" name="username">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="email" class="content__label">Email</label>
+							<label for="email" class="form-in__title">Email</label>
 							<input type="email" class="form-control" id="email" name="email">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="pass" class="content__label">password</label>
+							<label for="pass" class="form-in__title">password</label>
 							<input type="password" class="form-control" id="pass" name="password">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="re" class="content__label">Re-enter</label>
+							<label for="re" class="form-in__title">Re-enter</label>
 							<input type="password" class="form-control" id="re" name="confirmPassword">
 						</div>
 						<div class="form-in__label form-group">
-							<label for="quest" class="content__label">SECRET QUESTION</label>
+							<label for="quest" class="form-in__title">SECRET QUESTION</label>
 							<div class="select js-select">
 								<span class="select__text js-select-text">Select form list</span>
 								<i></i>
@@ -138,7 +130,7 @@
 							</div>
 						</div>
 						<div class="form-in__label form-group">
-							<label class="content__label" for="ans">Answer</label>
+							<label class="form-in__title" for="ans">Answer</label>
 							<input type="text" class="form-control" id="ans" name="username">
 						</div>
 					</div>
