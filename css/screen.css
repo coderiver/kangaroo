@@ -516,6 +516,9 @@ input::-webkit-input-placeholder { color: #bbbdbf; }
 .popup__date input { margin-right: 10px; margin-bottom: 10px; font-size: 16.25px; color: #58595b; }
 .popup__date .glyphicon { font-size: 20px; top: 3px !important; bottom: auto !important; }
 .popup__date .form-control-feedback { line-height: 20px; width: 20px; height: 20px; }
+.popup__date .js-select { cursor: pointer; width: 100px !important; text-align: left; }
+.popup__date .select { margin-bottom: 10px; margin-right: 10px; height: 60px; width: 65px; padding: 0; text-align: center; }
+.popup__date .select i { right: -35px; }
 .popup .popup__input-lil { width: 65px; padding: 18px 10px; text-align: center; }
 .popup .popup__input-time { width: 95px; padding: 18px 10px; text-align: center; }
 .popup .form-in__label { display: inline-block; width: auto; vertical-align: middle; margin: 0; }

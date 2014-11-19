@@ -103,8 +103,16 @@
 						<div class="form-in__label form-group">
 							<input type="text" class="popup__input-time" value="12:00" onfocus="if (this.value=='12:00') this.value='';" onblur="if (this.value==''){this.value='12:00'}">
 						</div>
-						<div class="form-in__label form-group">
-							<input type="text" class="popup__input-lil" value="AM" onfocus="if (this.value=='AM') this.value='';" onblur="if (this.value==''){this.value='AM'}">
+						<div class="form-in__label form-group js-select">
+							<div class="select">
+								<span class="select__text js-select-text">AM</span>
+								<i></i>
+								<input type="hidden" class="js-select-input" value="0" id="quest">
+								<ul class="select__list js-select-list">
+									<li data-id="0">AM</li>
+									<li data-id="2">PM</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
