@@ -106,25 +106,22 @@ head.ready(function() {
             },
             dd: {
                 validators: {
-                    date: {
+                    digits: {
                         format: 'DD',
-                        message: 'The value is not a valid date'
                     }
                 }
             },
             mm: {
                 validators: {
-                    date: {
+                    digits: {
                         format: 'MM',
-                        message: 'The value is not a valid date'
                     }
                 }
             },
             yy: {
                 validators: {
-                    date: {
+                    digits: {
                         format: 'YY',
-                        message: 'The value is not a valid date'
                     }
                 }
             }

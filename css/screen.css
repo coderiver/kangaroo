@@ -40,6 +40,10 @@ a { text-decoration: none; }
 
 .button_purple span { background: #c24f9c; color: white; }
 
+input { border: 1px solid #adafb1; color: #58595b; font-size: 16.25px; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input:-moz-placeholder, input::-moz-placeholder { color: #bbbdbf; opacity: 1; }
+input::-webkit-input-placeholder { color: #bbbdbf; }
+
 .select { position: relative; text-align: center; font-size: 0; cursor: pointer; width: 100%; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; font-family: "ProximaNova Regular", Arial, sans-serif; border: 1px solid #bbbdbf; padding: 0 50px 0 20px; height: 62px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left; }
 .select:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-width: 480px) { .select { padding: 0 40px 0 10px; height: 49px; } }
@@ -113,7 +117,7 @@ a { text-decoration: none; }
 .login__forgot:hover { text-decoration: underline; color: white; }
 .login__input { position: relative; display: block; margin-bottom: 20px; }
 .login__input .log-ico { display: block; position: absolute; top: 50%; }
-.login__input input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 18px 18px 18px 60px; height: auto !important; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; font-size: 16.25px; letter-spacing: 0.15em; font-family: "ProximaNova Regular", Arial, sans-serif; color: white; background: none; border: 2px solid white; }
+.login__input input { width: 100%; padding: 18px 18px 18px 60px; height: auto !important; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; color: white; background: none; border: 2px solid white; }
 .login__input input:-moz-placeholder, .login__input input::-moz-placeholder { color: white; opacity: 1; }
 .login__input input::-webkit-input-placeholder { color: white; }
 .login__input .glyphicon { top: 50% !important; margin-top: -17px; font-size: 30px; right: 10px; }
@@ -484,9 +488,7 @@ a { text-decoration: none; }
 .popup__button_mod { color: #bbbdbf; }
 .popup__button_mod:hover { color: #bbbdbf; }
 .popup__button:hover { text-decoration: underline; background: none; color: #e78c41; }
-.popup textarea, .popup input { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 18px 22px; color: #58595b; font-size: 16.25px; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; border: 1px solid #adafb1; }
-.popup textarea:-moz-placeholder, .popup textarea::-moz-placeholder, .popup input:-moz-placeholder, .popup input::-moz-placeholder { color: #bbbdbf; opacity: 1; }
-.popup textarea::-webkit-input-placeholder, .popup input::-webkit-input-placeholder { color: #bbbdbf; }
+.popup textarea, .popup input { width: 100%; padding: 18px 22px; }
 .popup textarea { height: 110px; resize: none; margin-bottom: 20px; }
 .popup input { max-width: 295px; display: inline-block; }
 .popup__links { display: inline-block; }
@@ -511,7 +513,7 @@ a { text-decoration: none; }
 .popup__date div { display: inline-block; vertical-align: middle; text-align: center; font-size: 0; vertical-align: top; }
 .popup__date div:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup__date label { color: #58595b; font-size: 16.25px; font-family: "ProximaNova Regular", Arial, sans-serif; letter-spacing: 0.15em; display: inline-block; vertical-align: middle; margin: 0 20px 10px 10px; }
-.popup__date input { margin-right: 10px; margin-bottom: 10px; }
+.popup__date input { margin-right: 10px; margin-bottom: 10px; font-size: 16.25px; color: #58595b; }
 .popup__date .glyphicon { font-size: 20px; top: 3px !important; bottom: auto !important; }
 .popup__date .form-control-feedback { line-height: 20px; width: 20px; height: 20px; }
 .popup .popup__input-lil { width: 65px; padding: 18px 10px; text-align: center; }
