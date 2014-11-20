@@ -886,6 +886,8 @@
 			background: #e78c41
 		&.is-cal
 			background: #f06461
+		&.is-tasks
+			background: #00a6cb 
 		i
 			display: inline-block
 			vertical-align: middle
@@ -920,6 +922,10 @@
 				+s(is-ical)
 			&.is-calset
 				+s(is-calset)
+			&.is-addcat
+				+s(is-addcat)
+			&.is-tasks
+				+s(is-tasks)
 		&:hover
 			text-decoration: none
 	&__title, &__label
@@ -1044,6 +1050,12 @@
 			background: #f06461 
 			&:hover
 				background: #f38381 
+.is-tasks
+	.sidebar__menu
+		a
+			background: #00a6cb 
+			&:hover
+				background: #33b8d5 
 
 
 

@@ -1,0 +1,122 @@
+.calendar
+	padding: 0 33px
+	max-width: 477px
+	margin: 0 auto
+	&__heading, &__title
+		+fs(16.25)
+		letter-spacing: 0.15em 
+	&__heading
+		+georgia
+		font-style: italic
+		color: #404041
+		margin-bottom: 20px
+		display: block
+	&__top
+		background: #00a6cb
+		text-align: center
+		padding: 14px 10px 12px 
+		margin-bottom: 4px
+		position: relative
+	&__title
+		color: #fff
+		+reg
+		+ttu 
+	&__weeks
+		background: #efefef
+		display: table
+		width: 100%
+		padding: 15px 12px
+		ul
+			display: table-row
+			width: 100%
+		li
+			+fs(12.5)
+			+reg
+			letter-spacing: 0.15em 
+			color: #00a6cb
+			display: table-cell 
+			+ttu
+	&__body
+		background: #efefef
+		padding: 0 6px 10px 6px
+		td
+			padding: 2px 6px
+	&__days
+		+vertical
+		width: 100%
+		height: 0
+		padding-bottom: 94%
+		border: 1px solid #9c9d9f
+		+border-radius(50%)
+		cursor: pointer
+		position: relative
+		&.is-active
+			background: #00a6cb
+			border-color: #00a6cb
+			.calendar__day
+				+bold
+				color: #fff 
+		&.is-open
+			.calendar__tooltip
+				display: block
+	&__day
+		+reg
+		letter-spacing: 0.15em 
+		+fs(12.5)
+		color: #00a6cb 
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		text-align: center
+		margin-top: -8px
+	&__tooltip
+		+vertical
+		position: absolute
+		top: 50%
+		// right: -250px
+		left: 100%
+		background: #efefef
+		border: 1px solid #f1f1f2 
+		padding: 20px 20px
+		display: none
+		z-index: 999
+		margin-top: -37px
+		&:before
+			position: absolute
+			top: 50%
+			margin-top: -8px
+			left: -14px
+			+arr(14, 16, #efefef, l)
+		// i
+		// 	display: inline-block
+		// 	vertical-align: middle
+		// 	+s(done)
+		// 	margin-right: 21px
+		span
+			display: block
+			+fs(18.75)
+			+reg
+			letter-spacing: 0.15em 
+			color: #58595b 
+			padding-left: 54px
+			width: 210px
+			position: relative
+			&:before
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -16px
+				content: "" 
+				+s(done)
+	&__arrow
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		cursor: pointer
+	&__left
+		+s(arrow-left)
+		left: -28px
+	&__right
+		+s(arrow-right)
+		right: -28px
