@@ -126,7 +126,7 @@ body .fc { /* extra precedence to overcome jqui */
 	color: #808184;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
-	margin-right: 35px;
+	margin: 0;
 }
 
 
@@ -556,12 +556,14 @@ a.fc-more:hover {
 
 .fc-toolbar .fc-left {
 	float: left;
+	width: 250px;
+	height: 65px;
 }
 
 .fc-toolbar .fc-right {
 	float: right;
 	margin-bottom: 13px;
-	padding-top: 33px;
+	padding-top: 15px;
 }
 
 .fc-toolbar .fc-center {
@@ -673,14 +675,13 @@ a.fc-more:hover {
 
 .fc-basic-view .fc-week-number,
 .fc-basic-view .fc-day-number {
-	padding: 0 2px;
 	font-family: "ProximaNova Regular" Arial, sans-sefir;
 	font-size: 16.5px;
 	color: #6d6e70;
 	letter-spacing: 0.15em;
-	padding: 20px 25px 0 25px
+	padding: 20px 25px 0 25px;
 }
-
+@media only screen and (max-width: 1200px) {.fc-basic-view .fc-week-number, .fc-basic-view .fc-day-number { padding: 0px 5px; font-size: 12.5px; }}
 .fc-basic-view .fc-week-number {
 	text-align: center;
 }
@@ -897,6 +898,7 @@ be a descendant of the grid when it is being dragged.
 .fc-content {
 	padding: 10px;
 }
+@media only screen and (max-width: 1200px) { .fc-content { padding: 3px; } }
 .fc-content:before { 
 	content: "";
 	display: inline-block;
@@ -923,6 +925,7 @@ be a descendant of the grid when it is being dragged.
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
 }
+@media only screen and (max-width: 1200px) { .fc-content .fc-title:before { width: 10px; height: 10px; margin-right: 5px; } .fc-content .fc-title { font-size: 12.5px;} }
 .fc-time-grid-event .fc-time,
 .fc-time-grid-event .fc-title {
 	padding: 0 1px;

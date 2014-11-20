@@ -865,6 +865,10 @@
 		color: #ffffff 
 		display: inline-block
 		vertical-align: middle
+	&__menu_mod
+		li
+			.sidebar__text
+				text-transform: none
 	&__icon
 		display: inline-block
 		vertical-align: middle
@@ -880,6 +884,8 @@
 			background: #c24f9c
 		&.is-soc
 			background: #e78c41
+		&.is-cal
+			background: #f06461
 		i
 			display: inline-block
 			vertical-align: middle
@@ -908,6 +914,12 @@
 			&.is-edit-ac
 				margin-left: 8px
 				+s(is-edit-ac)
+			&.is-calendar
+				+s(is-calendar)
+			&.is-ical
+				+s(is-ical)
+			&.is-calset
+				+s(is-calset)
 		&:hover
 			text-decoration: none
 	&__title, &__label
@@ -1026,6 +1038,12 @@
 			background: #e78c41 
 			&:hover
 				background: #eca367 
+.is-calendar
+	.sidebar__menu
+		a
+			background: #f06461 
+			&:hover
+				background: #f38381 
 
 
 
@@ -1282,14 +1300,17 @@
 		display: inline-block
 	.close
 		+opacity(1)
-	&__close
 		position: absolute
+		top: 20px
+		right: 20px
 		width: 39px
 		height: 39px
+	&__close
+		width: 39px
+		height: 39px
+		display: inline-block
 		border: 2px solid #fff
 		+border-radius(50%)
-		top: 20px
-		right: 19px
 		+vertical
 		cursor: pointer
 		i
@@ -1513,8 +1534,40 @@
 
 
 
-
-
+//calendar
+.calendar-buttons
+	position: absolute
+	top: 3px
+	left: 3px
+	height: 65px
+	+vertical
+	padding: 0 10px
+	button
+		background: none
+		border: none
+		display: inline-block
+		vertical-align: middle
+		+vertical
+		margin: 0 10px
+		i
+			display: inline-block
+			vertical-align: middle
+		span
+			+fs(12.5)
+			+reg
+			letter-spacing: 0.15em 
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+.add-cal
+	i
+		+s(addcal)
+		display: inline-block
+.task-cal
+	i
+		+s(caltask)
+	span
+		color: #00a6cb 
 
 
 
