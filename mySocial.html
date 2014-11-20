@@ -11,81 +11,72 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-<div class="overlay"></div>
-<div class="js-popups">
-	<div class="popup js-popup1">
-		<span class="popup__close"><i></i></span>
-		<div class="popup__top">
-			<span class="popup__heading">CREATE A NEW POST</span>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#js-account">
+  js-account
+</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#js-set">
+  js-set
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="js-account" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content popup">
+      <div class="modal-header popup__top">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="popup__close"><i></i></button>
+        <span class="popup__heading">CREATE A NEW POST</span>
+      </div>
+      <div class="modal-body">
+    	<ul class="popup__list">
+    		<li><a href="#" class="popup-twitter"></a></li>
+    		<li><a href="#" class="popup-facebook"></a></li>
+    		<li><a href="#" class="popup-google"></a></li>
+    		<li><a href="#" class="popup-linkedin"></a></li>
+    	</ul>
+    	<div class="select js-select">
+    		<span class="select__text js-select-text">Select Account</span>
+    		<i></i>
+    		<input type="hidden" class="js-select-input" value="0" id="quest">
+    		<ul class="select__list js-select-list">
+    			<li data-id="0">Select Account1</li>
+    			<li data-id="2">Select Account3</li>
+    			<li data-id="3">Select Account4</li>
+    			<li data-id="4">Select Account5</li>
+    			<li data-id="4">Select Account6</li>
+    		</ul>
+    	</div>
+		<div class="popup__bottom">
+	        <button type="button" class="btn btn-default popup__button" data-dismiss="modal">CANCEL</button>
+	        <button type="button" class="btn btn-primary popup__button">SUBMIT</button>
 		</div>
-		<div class="popup__inner">
-			<ul class="popup__list">
-				<li><a href="#" class="popup-twitter"></a></li>
-				<li><a href="#" class="popup-facebook"></a></li>
-				<li><a href="#" class="popup-google"></a></li>
-				<li><a href="#" class="popup-linkedin"></a></li>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="js-set" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content popup">
+      <div class="modal-header popup__top">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="popup__close"><i></i></span></button>
+        <span class="popup__heading">CREATE A NEW POST</span>
+      </div>
+      <div class="modal-body">
+		<textarea name="" id="" cols="30" rows="10" placeholder="Enter post content..."></textarea>
+		<div class="popup__bottom_mod">
+			<input type="text" class="popup__input" placeholder="Tiny-URL">
+			<ul class="popup__links">
+				<li><a href="#" class="popup__icons"><i class="is-geo"></i></a></li>
+				<li><a href="#" class="popup__icons"><i class="is-image"></i></a></li>
+				<li><a href="#" class="popup__icons js-date"><i class="is-calendar"></i></a></li>
 			</ul>
-			<div class="select js-select">
-				<span class="select__text js-select-text">Select Account</span>
-				<i></i>
-				<input type="hidden" class="js-select-input" value="0" id="quest">
-				<ul class="select__list js-select-list">
-					<li data-id="0">Select Account1</li>
-					<li data-id="2">Select Account3</li>
-					<li data-id="3">Select Account4</li>
-					<li data-id="4">Select Account5</li>
-					<li data-id="4">Select Account6</li>
-				</ul>
-			</div>
 			<div class="popup__bottom">
-				<button class="popup__button">CANCEL</button>
-				<button class="popup__button">SUBMIT</button>
+				<button type="button" class="btn btn-default popup__button popup__button_mod" data-dismiss="modal">CANCEL</button>
+				<button type="button" class="btn btn-primary popup__button popup__button_mod">SUBMIT</button>
 			</div>
 		</div>
-	</div>
-	<div class="popup js-popup2">
-		<span class="popup__close"><i></i></span>
-		<div class="popup__top">
-			<span class="popup__heading">COMPOSE POST</span>
-		</div>
-		<div class="popup__inner">
-			<textarea name="" id="" cols="30" rows="10" placeholder="Enter post content..."></textarea>
-			<div class="popup__bottom_mod">
-				<input type="text" class="popup__input" placeholder="Tiny-URL">
-				<ul class="popup__links">
-					<li><a href="#" class="popup__icons"><i class="is-geo"></i></a></li>
-					<li><a href="#" class="popup__icons"><i class="is-image"></i></a></li>
-					<li><a href="#" class="popup__icons js-date"><i class="is-calendar"></i></a></li>
-				</ul>
-				<div class="popup__buttons">
-					<button class="popup__button">CANCEL</button>
-					<button class="popup__button">SUBMIT</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="popup js-popup3">
-		<span class="popup__close"><i></i></span>
-		<div class="popup__top">
-			<span class="popup__heading">COMPOSE POST</span>
-		</div>
-		<div class="popup__inner">
-			<textarea name="" id="" cols="30" rows="10" placeholder="Enter post content..."></textarea>
-			<div class="popup__bottom_mod popup_left">
-				<input type="text" class="popup__input" placeholder="Tiny-URL">
-				<ul class="popup__links">
-					<li><a href="#" class="popup__icons"><i class="is-geo is-geo_grey"></i></a></li>
-					<li><a href="#" class="popup__icons"><i class="is-image is-image_grey"></i></a></li>
-					<li><a href="#" class="popup__icons js-date"><i class="is-calendar"></i></a></li>
-				</ul>
-			</div>
-			<div class="popup__bottom">
-				<button class="popup__button popup__button_mod">CANCEL</button>
-				<button class="popup__button popup__button_mod">SUBMIT</button>
-			</div>
-		</div>
-		<hr>
-		<div class="popup__inner">
+      </div>
+      <div class="modal-footer js-footer">
 			<form action="" class="registerForm">
 				<span class="popup__title">SET POST DATE</span>
 				<div class="popup__date">
@@ -117,12 +108,13 @@
 					</div>
 				</div>
 				<div class="popup__bottom">
-					<button class="popup__button">CANCEL</button>
-					<button class="popup__button btn-default">SUBMIT</button>
+					<button type="button" class="btn btn-default popup__button" data-dismiss="modal">CANCEL</button>
+					<button type="button" class="btn btn-primary popup__button">SUBMIT</button>
 				</div>
 			</form>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- BEGIN  out-->
 <div class="out in-p">
@@ -165,16 +157,16 @@
 						<li><a href="#"><span class="sidebar__icon"><i class="is-sync"></i></span><span class="sidebar__text">SYNC ACCOUNT</span></a></li>
 						<li><a href="#"><span class="sidebar__icon"><i class="is-set"></i></span><span class="sidebar__text">NEW SOCIAL SET</span></a></li>
 						<li><a href="#" class="js-post"><span class="sidebar__icon"><i class="is-post"></i></span><span class="sidebar__text">NEW POST</span></a></li>
-						<li><a href="#" class="js-account"><span class="sidebar__icon"><i class="is-edit-ac"></i></span><span class="sidebar__text">EDIT ACCOUNTS</span></a></li>
+						<li><a href="#" data-toggle="modal" data-target=".js-account"><span class="sidebar__icon"><i class="is-edit-ac"></i></span><span class="sidebar__text">EDIT ACCOUNTS</span></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-9 col-sm-6 col-xs-12 content">
 				<div class="box-wrap">
 					<div class="box box-open">
+						<i class="box__button is-open"></i>
 						<div class="box__top">
 							<span class="box__title">PLATFORMS</span>
-							<i class="box__button is-open"></i>
 						</div>
 						<div class="box__inner">
 							<ul class="box__social">
@@ -186,15 +178,15 @@
 						</div>
 					</div>
 					<div class="box">
+						<i class="box__button is-close"></i>
 						<div class="box__top">
 							<span class="box__title">social sets</span>
-							<i class="box__button is-close"></i>
 						</div>
 					</div>
 					<div class="box box-open">
+						<i class="box__button is-open"></i>
 						<div class="box__top">
 							<span class="box__title">accounts</span>
-							<i class="box__button is-open"></i>
 						</div>
 						<div class="box__inner">
 							<ul class="box__accounts">

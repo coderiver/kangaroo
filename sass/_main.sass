@@ -1033,6 +1033,8 @@
 //mysocial
 .box
 	margin-bottom: 50px
+	position: relative
+	padding-top: 5px
 	&-wrap
 		padding-top: 67px
 		+r(768)
@@ -1040,7 +1042,6 @@
 	&__top
 		border-bottom: 1px solid #a0a1a3 
 		padding-right: 40px
-		position: relative
 		padding-bottom: 17px
 		margin-bottom: 35px
 	&__title
@@ -1054,10 +1055,11 @@
 		top: 0
 		right: 0
 		cursor: pointer
-		&.is-open
-			+s(box-close)
+		z-index: 99
 		&.is-close
 			+s(box-open)
+		&.is-open
+			+s(box-close)
 	&__social
 		+fs(0)
 		li
@@ -1268,15 +1270,18 @@
 	display: none
 	&.is-open
 		display: block
-.popup
-	display: none
-	vertical-align: middle
-	position: relative
+.modal-lg
 	max-width: 725px
-	background: #fff 
+	border: none
+.popup
+	max-width: 725px
+	border: none
 	width: 100%
+	+border-radius(0px !important)
 	&.is-open
 		display: inline-block
+	.close
+		+opacity(1)
 	&__close
 		position: absolute
 		width: 39px
@@ -1308,6 +1313,7 @@
 		margin-bottom: 25px
 		display: block
 		color: #e78c41  
+		text-align: left
 	&__inner
 		padding: 22px 22px 0 22px
 		text-align: left
@@ -1315,14 +1321,14 @@
 		+fs(0)
 		text-align: center
 		margin-bottom: 20px
-		padding-top: 23px
+		padding-top: 20px
 		li
 			display: inline-block
 			vertical-align: top
 			padding: 2px
-			width: 88px
 		a
 			display: block
+			margin: 0 auto
 			&.popup-twitter
 				+s(box-twitter)
 			&.popup-facebook
@@ -1361,18 +1367,22 @@
 		text-align: right
 		padding-bottom: 22px
 	&__button
-		background: none
-		color: #e78c41 
+		background: none !important
+		color: #e78c41 !important
 		+fs(16.25)
 		+reg
 		letter-spacing: 0.15em 
-		margin-left: 25px
+		margin-left: 25px !important
+		border: none !important
+		outline: none !important
+		+box-shadow(none !important) 
+		padding: 0
 		&:hover
 			text-decoration: underline
 			background: none
 			color: #e78c41 
 		&_mod
-			color: #bbbdbf 
+			color: #bbbdbf !important
 			&:hover
 				color: #bbbdbf  
 	textarea, input
@@ -1490,9 +1500,16 @@
 		width: auto
 		vertical-align: middle
 		margin: 0
-
-
-
+	.js-footer
+		display: none
+.modal-backdrop
+	background: #e78c41 
+	&.in
+		+opacity(0.69)
+.modal-body
+	padding: 22px 22px 0 22px
+.modal-footer
+	padding: 22px 22px 0 22px
 
 
 
