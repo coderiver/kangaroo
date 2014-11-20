@@ -126,9 +126,9 @@ body .fc { /* extra precedence to overcome jqui */
 	color: #808184;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
-	margin: 0;
+	margin-right: 35px;
 }
-
+@media only screen and (max-width: 768px) {.fc-right .fc-state-default { display: block !important; float: none !important; margin: 10px 0;} .fc-right {clear: both; float: none !important; text-align: left; padding: 0 20px;}}
 
 
 /* icons in buttons */
@@ -925,7 +925,7 @@ be a descendant of the grid when it is being dragged.
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
 }
-@media only screen and (max-width: 1200px) { .fc-content .fc-title:before { width: 10px; height: 10px; margin-right: 5px; } .fc-content .fc-title { font-size: 12.5px;} }
+@media only screen and (max-width: 1200px) { .fc-content .fc-title:before { width: 15px; height: 15px; margin-right: 5px; } .fc-content .fc-title { font-size: 0px;} }
 .fc-time-grid-event .fc-time,
 .fc-time-grid-event .fc-title {
 	padding: 0 1px;
@@ -999,11 +999,13 @@ be a descendant of the grid when it is being dragged.
 	background: url(../img/icons/prev.png) no-repeat center center;
 	width: 11px;
 	height: 17px;
+	margin: 0;
 }
 .fc-next-button {
 	background: url(../img/icons/next.png) no-repeat center center;
 	width: 11px;
 	height: 17px;
+	margin: 0;
 }
 .fc-button {
 	display: inline-block;
@@ -1030,3 +1032,4 @@ be a descendant of the grid when it is being dragged.
 	border: 2px solid #fff !important;
 }
 
+@media only screen and (max-width: 768px) { .fc-day-grid-container { height: auto !important; } }

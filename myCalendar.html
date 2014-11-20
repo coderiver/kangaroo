@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" media="all" href="css/calendar.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out in-p">
+	<div class="container-fluid navigation">
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 col-xs-12 navigation__left">
+				<span class="navigation__title">Hello, John</span>
+				<button class="navigation__button"></button>
+				<div class="dropdown">
+					<ul>
+						<li><a href="#"><i class="is-virtual"></i><span>My Virtual Machine</span></a></li>
+						<li><a href="#"><i class="is-cal"></i><span>My Calendar</span></a></li>
+						<li><a href="#"><i class="is-datacenter"></i><span>My Data Center</span></a></li>
+						<li><a href="#"><i class="is-mail"></i><span>My Mail</span></a></li>
+						<li><a href="#"><i class="is-tasks"></i><span>My Tasks</span></a></li>
+						<li><a href="#"><i class="is-social"></i><span>My Social Network</span></a></li>
+						<li><a href="#"><i class="is-settings"></i><span>My User Settings</span></a></li>
+					</ul>
+					<div class="dropdown__back">
+						<a href="#"><span>Log Out</span><i class="arr-back"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-sm-6 col-xs-12 navigation__search">
+				<i class="search__icon"></i>
+				<input type="text" class="search__input" placeholder="Start typing your search ...">
+			</div>
+			<div class="col-lg-4 col-sm-12 col-xs-12 navigation__logo">
+				<a href="#"><img src="img/nav-logo.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid board">
+		<div class="row board__inner is-calendar">
+			<div class="col-lg-3 col-sm-6 col-xs-12 sidebar">
+				<div class="row">
+					<ul class="sidebar__menu sidebar__menu_mod">
+						<li><a href="#" class="is-active"><span class="sidebar__icon is-active is-cal"><i class="is-calendar"></i></span><span class="sidebar__text">My Calendar</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-ical"></i></span><span class="sidebar__text">iCalendar</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-ical"></i></span><span class="sidebar__text">Google Calendar</span></a></li>
+						<li><a href="#"><span class="sidebar__icon"><i class="is-calset"></i></span><span class="sidebar__text">Calendar Settings</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-9 col-sm-6 col-xs-12 content">
+				<div id='calendar'>
+					<div class="calendar-buttons">
+						<button class="add-cal"><i></i></button>
+						<button class="task-cal"><i></i><span>Hide Tasks</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid footer footer-absolute">
+		<div class="row">
+			<div class="col-xs12 footer__inner">
+				<div class="footer__left">
+					<ul class="footer__nav">
+						<li><a href="#"><i class="share"></i></a></li>
+						<li><a href="#">SUPPORT</a></li>
+						<li><a href="#">ABOUT</a></li>
+					</ul>
+				</div>
+				<a href="#" class="footer__copyright"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
