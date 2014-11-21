@@ -190,4 +190,29 @@ head.ready(function() {
 		$('.is-geo').toggleClass('is-geo_grey');
 		$('.is-image').toggleClass('is-image_grey');
 	});
+	$('.js-task-btn').on('click', function() {
+		if($(this).hasClass('task__close')) {
+			$(this).parents('.task').find('.task__inner').slideUp('fast');
+			$(this).removeClass('task__close');
+			$(this).addClass('task__open');
+		}
+		else {
+			$(this).parents('.task').find('.task__inner').slideDown('fast');
+			$(this).removeClass('task__open');
+			$(this).addClass('task__close');
+		}
+		return false;
+	});
+	// $('.task__close').on('click', function() {
+	// 	$(this).parents('.task').find('.task__inner').slideUp('fast');
+	// 	$(this).removeClass('task__close');
+	// 	$(this).addClass('task__open');
+	// 	return false;
+	// });
+	// $('.task__open').on('click', function() {
+	// 	$(this).parents('.task').find('.task__inner').slideDown('fast');
+	// 	$(this).removeClass('task__open');
+	// 	$(this).addClass('task__close');
+	// 	return false;
+	// });
 });

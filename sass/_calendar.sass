@@ -2,6 +2,8 @@
 	padding: 0 33px
 	max-width: 477px
 	margin: 0 auto
+	+r(768)
+		padding: 0 20px
 	&__heading, &__title
 		+fs(16.25)
 		letter-spacing: 0.15em 
@@ -59,6 +61,8 @@
 		&.is-open
 			.calendar__tooltip
 				display: block
+				+r(768)
+					display: none
 	&__day
 		+reg
 		letter-spacing: 0.15em 
@@ -70,6 +74,12 @@
 		right: 0
 		text-align: center
 		margin-top: -8px
+		+r(1500)
+			+fs(10)
+			margin-top: -7px
+		+r(768)
+			+fs(10)
+			margin-top: -6px
 	&__tooltip
 		+vertical
 		position: absolute
@@ -88,11 +98,6 @@
 			margin-top: -8px
 			left: -14px
 			+arr(14, 16, #efefef, l)
-		// i
-		// 	display: inline-block
-		// 	vertical-align: middle
-		// 	+s(done)
-		// 	margin-right: 21px
 		span
 			display: block
 			+fs(18.75)
@@ -117,6 +122,10 @@
 	&__left
 		+s(arrow-left)
 		left: -28px
+		+r(550)
+			left: -14px
 	&__right
 		+s(arrow-right)
 		right: -28px
+		+r(550)
+			right: -14px

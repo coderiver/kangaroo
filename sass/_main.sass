@@ -1581,15 +1581,145 @@
 	span
 		color: #00a6cb 
 
-
-
-
-
-
-
-
-
-
+//task
+.task
+	width: 90%
+	margin: 0 auto 30px
+	.is-complete
+		.task__title
+			color: #6d6e70 
+	.is-incomplete
+		.task__title
+			color: #808184 
+	+r(768)
+		width: 100%
+	&-wrap
+		padding-top: 69px
+	&__top
+		+clr
+		border-bottom: 1px solid #828384
+		padding: 10px 3px 15px 5px 
+	&__close
+		+s(task-close)
+		position: relative
+		display: block
+		float: left
+		margin-right: 15px
+	&__open
+		+s(task-open)
+		position: relative
+		display: block
+		float: left
+		margin-right: 15px
+	&__heading
+		overflow: hidden
+		+georgia
+		font-style: italic
+		+fs(16.25)
+		color: #404041
+		letter-spacing: 0.15em 
+		display: block
+		padding-top: 4px   
+	&__buttons
+		float: right
+		+vertical
+	&__button
+		margin: 0 8px
+		display: inline-block
+		vertical-align: middle
+	&__edit
+		+s(task-edit)
+	&__trash
+		+s(task-trash)
+	&__inner
+		padding-top: 20px
+	&__item
+		+clr
+		margin-bottom: 1px
+	&__left
+		float: left
+		padding: 0 1px 0 0
+	&__com
+		display: block
+		position: relative
+		width: 74px
+		height: 74px 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: -23px
+			margin-left: -23px
+		&:hover
+			+opacity(0.9)
+	&__complete
+		background: #00a6cb
+		&:before
+			+s(task-complete)
+	&__incomplete
+		background: #bbbdbf
+		&:before
+			+s(task-incomplete)
+	&__right
+		background: #f2f3f3
+		overflow: hidden
+		padding: 0 17px 0 27px 
+	&__vertical
+		line-height: 74px
+	&__title, &__calendar, &__links a
+		display: inline-block
+		+fs(16.25)
+		+reg
+		letter-spacing: 0.15em 
+	&__title
+		vertical-align: middle
+		line-height: 1.2
+		a
+			color: #00a6cb 
+	&__calendar
+		padding: 5px 0 5px 41px
+		position: relative
+		color: #6D6E70 
+		&:before
+			content: ""
+			+s(task-calendar)
+			position: absolute
+			top: 50%
+			left: 0
+			margin-top: -14px
+	&__right_mod
+		padding-top: 5px
+		min-height: 74px
+		padding-bottom: 10px
+	&__links
+		float: right
+		+fs(0)
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 0 5px 40px
+		a
+			color: #00a6cb
+			border-bottom: 2px solid #00a6cb  
+			+ttu
+			padding-bottom: 5px
+			display: inline
+			line-height: 1.8
+			text-decoration: none !important
+			&:hover
+				border-bottom: none
+	&__bot
+		clear: both
+		text-align: right
+		padding: 15px 25px
+		a
+			+reg
+			+ttu
+			+fs(16.25)
+			color: #00A6CB 
+			letter-spacing: 0.15em 
+			text-decoration: none !important
 
 
 
