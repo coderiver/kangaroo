@@ -134,6 +134,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .more span { display: inline-block; margin-bottom: 55px; }
 .more .arr-bot { background: url('../img/icons-saa86f22e3e.png') 0 -60px no-repeat; width: 53px; height: 32px; display: block; margin: 0 auto; }
 .more:hover { color: white; text-decoration: none; }
+.more:visited { color: white; }
 
 .vertical { text-align: center; font-size: 0; height: 100%; }
 .vertical:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
